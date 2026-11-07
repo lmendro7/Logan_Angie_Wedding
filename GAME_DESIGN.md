@@ -31,9 +31,9 @@ Friends and family appear as NPCs. Humor, familiar people, simple clues, and exp
 
 ## 3. Review checkpoints — required
 
-Approval of the garden concept is NOT approval of a finished map.
+Lucas approved map draft 01 on November 7, 2026, with a closed garden gate required before Angie can be approached. The gate addition is authorized. Final art and character sprites are still subject to their own reviews.
 
-1. **Map layout review:** Present a visual draft showing the house, paths, NPC positions, fountain, ring locations, tree, and venue. Lucas reviews and approves or requests changes before the playable world and quest placement are built around that layout. A small mockup or blockout may be created for this review.
+1. **Map layout review — completed:** The reviewed house, paths, NPC positions, fountain, ring locations, tree, and venue arrangement is approved, with the authorized gate addition shown in docs/map-draft-01.svg. Material changes to this arrangement need another review.
 2. **Character reviews:** Review characters individually. Names, dialogue, and reference descriptions below are recorded, but final sprites still need visual review. Parents' models are explicitly deferred.
 3. **Playable review:** Provide a first complete browser preview for Lucas to test on his phone before final polish.
 4. **Release review:** Explain important changes and testing results before deployment. Hosting and release details still need to be settled.
@@ -47,12 +47,16 @@ Do not build the whole game and only then ask Lucas to review the map. Revisit m
 - Two rings are found separately.
 - Sophie provides a clue toward the first ring.
 - Logan's parents provide a clue toward the second ring.
-- Both rings must be recovered before the successful ending with Angie.
+- Both rings must be recovered before Logan can physically approach Angie or trigger the ending.
+- A closed garden gate is the only entrance to the ceremony enclosure. Hedges or fences block walking around it.
+- The gate opens automatically when both distinct rings are collected. With zero or one ring it stays closed. Early interaction displays: "I need to find both rings first!"
+- Gate state is derived from ring progress and restored correctly after a reload. Both ring locations and all clue NPCs remain reachable outside the locked enclosure.
+- Angie's interaction also checks for both rings as a second safeguard.
 - Lucas has delegated creation of the clue sequence, subject to the agreed map review.
 - Ryan's approved exchange must remain intact; any additional clue can be discovered nearby rather than added to that exchange.
 - No combat, farming, multiplayer, accounts, or complex inventory is planned for the initial release.
 
-## 5. Map concept — approved; layout pending
+## 5. Map layout — approved with garden gate
 
 One compact garden-like outdoor area connects Logan's house with the wedding venue. A small bedroom/house area supports the opening.
 
@@ -63,9 +67,9 @@ One compact garden-like outdoor area connects Logan's house with the wedding ven
 | Fountain | First ring discovery |
 | Parents near the venue | Second ring clue |
 | Nearby tree | Second ring discovery beneath the tree |
-| Wedding venue and flower arch | Angie waits; ending after collecting both rings |
+| Wedding venue and flower arch | Angie waits inside a hedge/fence enclosure; one gate opens automatically after both rings are collected |
 
-Short paths connect these places. Exact dimensions, arrangement, building interiors, collision boundaries, art, clue wording, and precise pickup positions require the map draft and review.
+Short paths connect these places in the approved arrangement shown in docs/map-draft-01.svg. Exact dimensions, building interiors, collision boundaries, art, clue wording, and precise pickup positions remain to be implemented or reviewed as appropriate. The diagram is not final game art.
 
 ## 6. Characters
 
@@ -160,7 +164,7 @@ A QR code is a potential convenience after a stable URL exists, not a finalized 
 
 - Keep this document current.
 - Choose reusable art candidates.
-- Present the visual map draft for Lucas's approval.
+- Map draft reviewed and approved; incorporate the authorized ceremony gate.
 - Review character sprite previews individually.
 - Confirm exact delivery time.
 
@@ -185,7 +189,10 @@ Incorporate review feedback, finish character details, check mobile usability, r
 - NPCs use the correct display names and approved dialogue.
 - Both ring locations can be reached; clues accurately describe the final approved map.
 - Each ring can only be collected once.
-- Angie cannot trigger the successful ending until both rings are collected.
+- With zero rings, either single ring, or a repeated pickup of one ring, the gate stays closed and Angie cannot be approached or trigger the ending.
+- With both distinct rings, the gate opens automatically and the ending becomes reachable.
+- The locked enclosure cannot be bypassed on either side, and neither ring is placed inside it.
+- Reloading with one ring keeps the gate closed; reloading with both keeps it open.
 - After collecting both rings, the player can reach Angie and see "You made it!"
 - Device-local progress survives a normal reload where browser storage is available.
 - The quest can be completed from a fresh start without getting stuck.
@@ -196,7 +203,6 @@ Incorporate review feedback, finish character details, check mobile usability, r
 ## 11. Open decisions
 
 - Exact deadline time and time zone.
-- Visual map layout approval.
 - Final sprites for every character, including deferred parent models.
 - Exact clue wording and any extra dialogue.
 - Asset pack, attribution, and any optional spending.
