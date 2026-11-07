@@ -35,7 +35,7 @@ Lucas approved map draft 01 on November 7, 2026, with a closed garden gate requi
 
 1. **Map layout review — completed:** The reviewed house, paths, NPC positions, fountain, ring locations, tree, and venue arrangement is approved, with the authorized gate addition shown in docs/map-draft-01.svg. Material changes to this arrangement need another review.
 2. **Character reviews:** Review characters individually. Names, dialogue, and reference descriptions below are recorded, but final sprites still need visual review. Parents' models are explicitly deferred.
-3. **Playable review:** Provide a first complete browser preview for Lucas to test on his phone before final polish.
+3. **Playable review — in progress:** Lucas tried the first playable version on his phone and reported that the layout and movement seem good. Parent dialogue has been revised per his feedback. Art remains provisional and needs individual character reviews. Further phone checks remain open.
 4. **Release review:** Explain important changes and testing results before deployment. Hosting and release details still need to be settled.
 
 Do not build the whole game and only then ask Lucas to review the map. Revisit major design changes with him. Routine implementation choices can proceed within the approved scope.
@@ -115,21 +115,21 @@ Short paths connect these places in the approved arrangement shown in docs/map-d
 
 The phrase above preserves the user's draft. Grammar/punctuation and the completed clue can be reviewed together; the intended tone is casual and sarcastic.
 
-### Logan's Mom
+### Logan's Mother
 
-- Display name must be **Logan's Mom**; actual name is unnecessary.
+- Display name must be **Logan's Mother**; actual name is unnecessary.
 - White, dirty blonde hair; further model details deferred.
 - Approved reaction:
 
-> **Logan's Mom:** Oh No!
+> **Logan's Mother:** You lost them!!
 
-### Logan's Dad
+### Logan's Father
 
-- Display name must be **Logan's Dad**; actual name is unnecessary.
+- Display name must be **Logan's Father**; actual name is unnecessary.
 - White, dirty blonde hair; further model details deferred.
 - Approved reaction:
 
-> **Logan's Dad:** That's not good
+> **Logan's Father:** Thats not good
 
 The parents then provide the clue toward the second ring. Exact clue and any connecting Logan dialogue remain to be written and reviewed.
 
