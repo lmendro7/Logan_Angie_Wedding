@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="840" height="1140" viewBox="0 0 840 1140">
 <rect width="840" height="1140" fill="#f7f1e4"/>
 <text x="34" y="59" font-family="DejaVu Sans, sans-serif" font-size="34" font-weight="bold" fill="#243e32">THE MISSING RINGS</text>
-<text x="35" y="94" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="normal" fill="#243e32">Map draft 01  /  layout for your review</text>
+<text x="35" y="94" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="normal" fill="#243e32">Approved layout  /  garden gate added</text>
 <text x="35" y="122" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="normal" fill="#68735f">Diagram only. Final pixel art and sprites will differ.</text>
 <rect x="28" y="152" width="784" height="799" fill="#b9ce9a" stroke="#81916c" stroke-width="3"/>
 <rect x="57" y="217" width="16" height="37" fill="#92704a" stroke="#92704a" stroke-width="2"/>
@@ -63,6 +63,21 @@
 <text x="308" y="310" font-family="DejaVu Sans, sans-serif" font-size="19" font-weight="bold" fill="#ffffff">6</text>
 <text x="360" y="309" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="bold" fill="#243e32">Angie</text>
 <text x="320" y="355" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="bold" fill="#243e32">Wedding venue</text>
+<rect x="270" y="160" width="300" height="12" fill="#52734b" stroke="#52734b" stroke-width="2"/>
+<rect x="270" y="160" width="13" height="216" fill="#52734b" stroke="#52734b" stroke-width="2"/>
+<rect x="557" y="160" width="13" height="216" fill="#52734b" stroke="#52734b" stroke-width="2"/>
+<rect x="270" y="364" width="121" height="12" fill="#52734b" stroke="#52734b" stroke-width="2"/>
+<rect x="449" y="364" width="121" height="12" fill="#52734b" stroke="#52734b" stroke-width="2"/>
+<rect x="391" y="357" width="5" height="24" fill="#73583e" stroke="#73583e" stroke-width="2"/>
+<rect x="445" y="357" width="5" height="24" fill="#73583e" stroke="#73583e" stroke-width="2"/>
+<rect x="397" y="362" width="46" height="5" fill="#a98256" stroke="#a98256" stroke-width="2"/>
+<rect x="397" y="374" width="46" height="5" fill="#a98256" stroke="#a98256" stroke-width="2"/>
+<rect x="399" y="359" width="4" height="21" fill="#a98256" stroke="#a98256" stroke-width="2"/>
+<rect x="409" y="359" width="4" height="21" fill="#a98256" stroke="#a98256" stroke-width="2"/>
+<rect x="419" y="359" width="4" height="21" fill="#a98256" stroke="#a98256" stroke-width="2"/>
+<rect x="429" y="359" width="4" height="21" fill="#a98256" stroke="#a98256" stroke-width="2"/>
+<rect x="439" y="359" width="4" height="21" fill="#a98256" stroke="#a98256" stroke-width="2"/>
+<text x="328" y="398" font-family="DejaVu Sans, sans-serif" font-size="16" font-weight="bold" fill="#243e32">Both rings to enter</text>
 <rect x="612" y="359" width="16" height="37" fill="#92704a" stroke="#92704a" stroke-width="2"/>
 <rect x="583" y="325" width="74" height="42" fill="#52734b" stroke="#52734b" stroke-width="2"/>
 <rect x="595" y="307" width="50" height="72" fill="#638951" stroke="#638951" stroke-width="2"/>
@@ -121,11 +136,11 @@
 <ellipse cx="130.0" cy="360.0" rx="3.0" ry="3.0" fill="#eed0b7" stroke="#eed0b7" stroke-width="2"/>
 <ellipse cx="130.0" cy="370.0" rx="3.0" ry="3.0" fill="#eed0b7" stroke="#eed0b7" stroke-width="2"/>
 <ellipse cx="130.0" cy="365.0" rx="2.0" ry="2.0" fill="#e3af4f" stroke="#e3af4f" stroke-width="2"/>
-<ellipse cx="335.0" cy="395.0" rx="3.0" ry="3.0" fill="#eed0b7" stroke="#eed0b7" stroke-width="2"/>
-<ellipse cx="345.0" cy="395.0" rx="3.0" ry="3.0" fill="#eed0b7" stroke="#eed0b7" stroke-width="2"/>
-<ellipse cx="340.0" cy="390.0" rx="3.0" ry="3.0" fill="#eed0b7" stroke="#eed0b7" stroke-width="2"/>
-<ellipse cx="340.0" cy="400.0" rx="3.0" ry="3.0" fill="#eed0b7" stroke="#eed0b7" stroke-width="2"/>
-<ellipse cx="340.0" cy="395.0" rx="2.0" ry="2.0" fill="#e3af4f" stroke="#e3af4f" stroke-width="2"/>
+<ellipse cx="340.0" cy="420.0" rx="3.0" ry="3.0" fill="#eed0b7" stroke="#eed0b7" stroke-width="2"/>
+<ellipse cx="350.0" cy="420.0" rx="3.0" ry="3.0" fill="#eed0b7" stroke="#eed0b7" stroke-width="2"/>
+<ellipse cx="345.0" cy="415.0" rx="3.0" ry="3.0" fill="#eed0b7" stroke="#eed0b7" stroke-width="2"/>
+<ellipse cx="345.0" cy="425.0" rx="3.0" ry="3.0" fill="#eed0b7" stroke="#eed0b7" stroke-width="2"/>
+<ellipse cx="345.0" cy="420.0" rx="2.0" ry="2.0" fill="#e3af4f" stroke="#e3af4f" stroke-width="2"/>
 <ellipse cx="555.0" cy="622.0" rx="3.0" ry="3.0" fill="#eed0b7" stroke="#eed0b7" stroke-width="2"/>
 <ellipse cx="565.0" cy="622.0" rx="3.0" ry="3.0" fill="#eed0b7" stroke="#eed0b7" stroke-width="2"/>
 <ellipse cx="560.0" cy="617.0" rx="3.0" ry="3.0" fill="#eed0b7" stroke="#eed0b7" stroke-width="2"/>
