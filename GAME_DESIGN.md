@@ -85,9 +85,10 @@ Short paths connect these places in the approved arrangement shown in docs/map-d
 ### Angie — bride
 
 - Appearance reference: the woman in the supplied couple photos.
-- Proposed visual interpretation: brown hair, glasses, light skin, white wedding dress.
+- Approved appearance: shoulder-length softly wavy brown hair, glasses, light skin, and a white sleeveless wedding dress with broad straps, a square neckline, fitted waist, and flared skirt.
+- Slim arms and an elongated oval face with a softly tapering jaw and gently rounded chin, guided by the supplied couple photos.
 - Waits at the venue beneath a flower arch.
-- Final sprite and dress details need review.
+- Appearance approved November 7, 2026: see `docs/art/angie-approved-01/README.md`. Animation-ready sprites still need preparation and verification before integration.
 - Approved ending dialogue:
 
 > **Angie:** You made it!
