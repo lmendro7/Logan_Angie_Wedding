@@ -24,5 +24,5 @@ export function objective(progress) {
   if (gateOpen(progress)) return 'Both rings found! Head to Angie.';
   if (!progress.met.includes('ryan')) return 'See if Ryan knows what happened.';
   if (!progress.rings.includes('fountain')) return progress.met.includes('sophie') ? 'Search around the fountain.' : 'Find Sophie by the garden bench.';
-  return progress.met.includes('parents') ? 'Search beneath the tree near the venue.' : 'Talk to Mom and Dad near the venue.';
+  return progress.met.includes('parents') ? 'Search beneath the tree near the venue.' : 'Talk to Mother and Father near the venue.';
 }

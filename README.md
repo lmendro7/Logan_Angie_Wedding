@@ -46,6 +46,6 @@ The build produces a static `dist/` directory with the engine bundled locally; i
 
 Automated tests check duplicate/unknown rings, either collection order, malformed/unavailable storage, save/reload gate states, collision tunneling, and map reachability with the gate locked and unlocked. Production build passes.
 
-A Chromium browser playthrough in a 390 × 844 CSS-pixel iframe verified the bedroom exit, all NPC dialogue, both ring pickups, one-ring gate blocking and its message, unlocked approach, and ending. This is a portrait layout check, not physical iOS/Android or touch-device certification. Real phone testing and individual character-art reviews remain required.
+A Chromium browser playthrough in a 390 × 844 CSS-pixel iframe verified the bedroom exit, all NPC dialogue, both ring pickups, one-ring gate blocking and its message, unlocked approach, and ending. This is a portrait layout check, not physical iOS/Android or touch-device certification. Lucas tried the first playable version on his phone and reported that the layout and movement seem good. Further device checks and individual character-art reviews remain open.
 
 No paid assets, analytics, third-party accounts, combat, or multiplayer have been added. The current route is intentionally very short; do not add filler to reach a duration target.

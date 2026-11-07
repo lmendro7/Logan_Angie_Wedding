@@ -203,7 +203,7 @@ class Adventure extends Phaser.Scene {
       const hair = npc.id === 'sophie' ? 0x252c30 : npc.id === 'ryan' ? 0xc4a36e : 0x8d6847;
       const person = this.add.container(npc.x, npc.y, this.makePerson(npc.color, hair));
       person.setDepth(5);
-      this.label(npc.x, npc.y + (npc.id === 'dad' ? 32 : 16), npc.name, 11);
+      this.label(npc.x, npc.y + (npc.id === 'dad' ? 44 : 16), npc.name, 11);
     }
     this.label(384, 868, "Logan's house");
     this.label(384, 39, 'Wedding ceremony');

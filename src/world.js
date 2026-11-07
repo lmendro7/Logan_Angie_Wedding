@@ -18,8 +18,8 @@ export const OBSTACLES = [
 export const NPCS = [
   { id: 'ryan', x: 510, y: 610, name: 'Ryan', color: 0x9a9f9b },
   { id: 'sophie', x: 230, y: 480, name: 'Sophie', color: 0x81719c },
-  { id: 'parents', x: 445, y: 365, name: "Logan's Mom", color: 0xbd8796 },
-  { id: 'dad', x: 485, y: 365, name: "Logan's Dad", color: 0x7c96aa },
+  { id: 'parents', x: 445, y: 365, name: "Logan's Mother", color: 0xbd8796 },
+  { id: 'dad', x: 485, y: 365, name: "Logan's Father", color: 0x7c96aa },
   { id: 'angie', x: 384, y: 115, name: 'Angie', color: 0xfff7dd },
 ];
 export const RINGS = [

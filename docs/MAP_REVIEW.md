@@ -22,7 +22,7 @@ The route is short and contained. Exact collision tiles, map dimensions, camera 
 
 After Sophie's existing lead-in: "I think I saw you at the fountain. Maybe check around the edge?"
 
-After the parents' approved reactions, Dad could say: "You were sitting under that tree earlier. Did you leave anything there?"
+After the parents' approved reactions, Father could say: "You were sitting under that tree earlier. Did you leave anything there?"
 
 Keep Ryan's three-line exchange exactly as agreed. Use a brief objective prompt to encourage exploring and talking to people without adding unapproved dialogue to his exchange.
 
@@ -39,4 +39,4 @@ Lucas approved the arrangement and requested that Angie cannot be approached unt
 - Repeatedly collecting one ring must not unlock it.
 - Angie's interaction checks both rings independently as a safeguard.
 
-This is a design update, not a claim that a playable gate or collision system has been implemented.
+The playable review build now implements this gate and collision behavior. Lucas reviewed the first version on his phone and reported that layout and movement seem good; art remains provisional.
