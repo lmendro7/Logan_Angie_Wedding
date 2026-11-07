@@ -76,10 +76,11 @@ Short paths connect these places in the approved arrangement shown in docs/map-d
 ### Logan — playable groom
 
 - Appearance reference: the man in the supplied couple photos.
-- Short brown hair, trimmed beard, light skin.
+- Short dirty-blonde hair, matching short beard, light skin. Hair has tapered sides/back, a compact brushed-back top, and soft matte shading.
+- Lean, youthful face guided by the reference photos, a gently rounded nose, and a smaller head relative to the body.
 - Approved outfit: black suit and white shirt.
 - Starts in wedding clothes, including in the bedroom.
-- Final sprite needs review.
+- Appearance approved November 7, 2026: see `docs/art/logan-approved-01/README.md`. Animation-ready sprites must still be updated to match this reference before integration.
 
 ### Angie — bride
 
