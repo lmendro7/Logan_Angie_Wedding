@@ -2,11 +2,15 @@
 
 A repository for planning and developing an interactive wedding game.
 
+## Continue from the recovered art and notes
+
+Read [SESSION_HANDOFF.md](SESSION_HANDOFF.md), [session notes](docs/SESSION_NOTES.md), [world-sprite and portrait directions](docs/art/ART_DIRECTION.md), and [character status](docs/art/CHARACTER_STATUS.md). Logan and Angie have approved appearance boards; Ryan has an approved hat-on, lowered-waistband map-sprite design. These references still need runtime sprite and dialogue portrait adaptation.
+
 ## Status
 
 The first playable foundation implements the approved garden layout, bedroom opening, touch/keyboard movement, character dialogue, two separate ring discoveries, device-local progress, and a ceremony gate that opens only after both rings are collected.
 
-**This is a review build.** All environment and character art is original code-drawn placeholder art. Individual character reviews and a reusable pixel-art asset selection are still ahead. The clue endings, opening lines, title, and extra ending-screen wording are provisional. No reference photos are shipped.
+**This is a review build.** All environment and character art is original code-drawn placeholder art. Remaining individual character reviews, runtime sprite preparation, dialogue portraits, and environment asset selection are still ahead. The clue endings, opening lines, title, and extra ending-screen wording are provisional. No reference photos are shipped.
 
 ## Run locally
 

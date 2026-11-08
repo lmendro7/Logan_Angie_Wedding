@@ -76,17 +76,19 @@ Short paths connect these places in the approved arrangement shown in docs/map-d
 ### Logan — playable groom
 
 - Appearance reference: the man in the supplied couple photos.
-- Short brown hair, trimmed beard, light skin.
+- Short dirty-blonde hair, matching short beard, light skin. Hair has tapered sides/back, a compact brushed-back top, and soft matte shading.
+- Lean, youthful face guided by the reference photos, a gently rounded nose, and a smaller head relative to the body.
 - Approved outfit: black suit and white shirt.
 - Starts in wedding clothes, including in the bedroom.
-- Final sprite needs review.
+- Appearance approved November 7, 2026: see `docs/art/logan-approved-01/README.md`. Animation-ready sprites must still be updated to match this reference before integration.
 
 ### Angie — bride
 
 - Appearance reference: the woman in the supplied couple photos.
-- Proposed visual interpretation: brown hair, glasses, light skin, white wedding dress.
+- Approved appearance: shoulder-length softly wavy brown hair, glasses, light skin, and a white sleeveless wedding dress with broad straps, a square neckline, fitted waist, and flared skirt.
+- Slim arms and an elongated oval face with a softly tapering jaw and gently rounded chin, guided by the supplied couple photos.
 - Waits at the venue beneath a flower arch.
-- Final sprite and dress details need review.
+- Appearance approved November 7, 2026: see `docs/art/angie-approved-01/README.md`. Animation-ready sprites still need preparation and verification before integration.
 - Approved ending dialogue:
 
 > **Angie:** You made it!
@@ -95,8 +97,8 @@ Short paths connect these places in the approved arrangement shown in docs/map-d
 
 - Funny and outgoing.
 - Appearance reference: the foreground person in the supplied Ryan photo.
-- Reference interpretation: sandy blond hair, light facial stubble, oversized gray hoodie, sunglasses hanging from the neckline.
-- Final sprite needs review.
+- Approved map-sprite design, November 7, 2026: skinny build; brown/off-white cap worn forward on his head; short sandy blond hair swept beneath the brim; cream short-sleeve button-down with a coral flower; sunglasses at the neckline; navy trousers with a slightly lowered waistband; brown belt and shoes. This replaces the earlier hoodie and waistband-clipped cap directions.
+- Approved reference: `docs/art/ryan-approved-01/ryan-review.png`. Exact-resolution runtime sprites, animation, and a separate detailed dialogue portrait still need preparation and review.
 - Approved dialogue, preserving Lucas's wording:
 
 > **Ryan:** You lost the rings?!  
@@ -135,6 +137,10 @@ The parents then provide the clue toward the second ring. Exact clue and any con
 
 ## 7. Art and asset approach
 
+- **Latest direction, November 7, 2026:** Each character needs two separate visual assets: a very basic, highly pixelated in-world sprite and a more detailed dialogue portrait displayed beside their name when they speak. The supplied Stardew Valley screenshots guide the small in-world scale and simplicity.
+- Keep the existing detailed character designs as appearance/portrait references. Adapt them into dialogue portraits rather than using enlarged review-board figures as map sprites. Retain Ryan's skinny build and latest flower-shirt/cap outfit in both representations.
+- Create the simple in-world version for Logan, Angie, Ryan, Sophie, Logan's Mother, and Logan's Father. Review a sample at actual game scale before making the full set. Exact sprite dimensions/frame counts and portrait crops remain implementation proposals to review.
+- This direction and Ryan's map-sprite design are approved; the other simple character sprites and dialogue portrait presentation still need visual review. No new sprite or dialogue-portrait UI has been integrated yet.
 - Cozy, top-down pixel art, using a consistent scale and palette.
 - Use ready-made tiles, characters, buildings, and interface assets to save time.
 - Personalize character appearance where practical.
