@@ -6,7 +6,7 @@ Updated November 7, 2026.
 | --- | --- | --- |
 | Logan | Approved: [appearance 01](logan-approved-01/README.md); retain for portrait reference | Simple map sprites and dialogue portrait adaptation pending; older draft 01 animation does not match approved appearance |
 | Angie | Approved: [appearance 01](angie-approved-01/README.md); retain for portrait reference | Simple map sprites and dialogue portrait adaptation pending |
-| Ryan | Approved: [map-sprite design 01](ryan-approved-01/README.md); cap worn on head, swept blond hair, skinny build, flower shirt, lowered waistband | Exact-resolution runtime sprites, animation, and separate detailed portrait pending |
+| Ryan | Approved: [map-sprite design 01](ryan-approved-01/README.md); cap worn on head, swept blond hair, skinny build, flower shirt, lowered waistband | [Runtime sprite sheet 01](ryan-sprite-01/README.md) (16 × 32, four directions, walk frames) awaiting review; not yet integrated. Detailed portrait pending |
 | Sophie | Pending individual preview | Pending |
 | Logan's Mother | Model details deferred | Pending |
 | Logan's Father | Model details deferred | Pending |

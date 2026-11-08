@@ -19,7 +19,7 @@ Each of Logan, Angie, Ryan, Sophie, Logan's Mother, and Logan's Father needs bot
 
 ## Next work
 
-1. Use Ryan's approved design to prepare an aligned runtime sprite sheet and review it at the game's actual scale.
+1. Use Ryan's approved design to prepare an aligned runtime sprite sheet and review it at the game's actual scale. Done as [Ryan runtime sprite 01](ryan-sprite-01/README.md) (16 × 32 frames, proposed), awaiting review. Once approved, use the same frame size, layout, anchor and palette approach for the other characters.
 2. Review the remaining characters individually before applying final visuals.
 3. Prepare separate portraits, then implement the image beside the speaker's name and check phone readability.
 

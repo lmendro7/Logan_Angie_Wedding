@@ -42,6 +42,10 @@ Existing four-view boards are appearance references, not finished portrait crops
 
 This update publishes the recovered approved Ryan image, retained studies, current handoff, reconstructed notes in `docs/SESSION_NOTES.md`, and explicit directions in `docs/art/ART_DIRECTION.md` on `art/logan-character-review`. The branch is the complete continuation point for this scope. Main still contains the initial README; PRs #1–#3 remain unmerged. Original unpublished local commit hashes are provenance, not a claim that those hashes exist on GitHub.
 
+## Update — November 8, 2026
+
+Ryan's runtime map sprite sheet is drafted at `docs/art/ryan-sprite-01/` (16 × 32 px frames; rows down/right/up/left; columns stand/step A/step B; rebuilt by `build_sprite.py`). It was checked at game scale in a temporary local build and is **awaiting Lucas's review**. It is not integrated into the game yet. Once it is approved, integrate it, then repeat the format for Logan, Angie, Sophie and the parents.
+
 ## Immediate next session
 
 1. Read the repo's current requirements and inspect branch/PR state; preserve any newer work.
