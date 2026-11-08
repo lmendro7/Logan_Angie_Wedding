@@ -26,3 +26,11 @@ Lucas: round 1 was not what he imagined. He likes Stardew's simple, comforting d
 1. Stardew comfort (16 × 32) · 2. Pokémon comfort (16 × 28, brighter) · 3. Even mix (16 × 28, soft colours, shiny eyes) · 4. Extra soft (tinted outline) · 5. Big round head · 6. Big head, bright
 
 Rebuild: `python3 tools/sprites/style_mix2.py`.
+
+## Preview: Angie's detailed model as her map sprite
+
+Lucas asked to see Angie's high-detail model (from her approved board, via [board-sprites-01](../board-sprites-01/README.md)) used as her character on the map. Temporary local build, not committed; the rest of the cast keeps the 16 × 24 sprites for comparison.
+
+![Angie's detailed model in the game](angie-hd-in-game.png)
+
+She stands about 67 px tall against Logan's 24. Using this level of detail for the map means drawing everyone at that size; her detailed model also still has glasses and no veil.
