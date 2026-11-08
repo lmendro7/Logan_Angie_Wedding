@@ -1,5 +1,9 @@
 # Wedding game — next-session handoff
 
+## Latest art exploration — November 8, 2026
+
+Lucas requested an original Logan study closer to Stardew Valley's pixel-art language. Preserve [study 01](docs/art/logan-pixel-studies-02/README.md): he likes the style and explicitly requested keeping it saved. He then requested less formal hair and a more pixelated treatment. Study 02 explores relaxed tousled hair and chunkier sprite/portrait shapes; Lucas called it "much better" and requested shorter hair. Study 03 shortens the top, fringe, sides and back and awaits visual review. All three boards are appearance concepts, not runtime sprite sheets or actual game screenshots. The running game still uses the Cozy Garden assets described below. Keep the white shirt and black bow tie, youthful slim face, dirty-blond hair and short matching beard. This exploration does not approve a cast-wide replacement or a map change.
+
 ## START HERE — state at the end of November 8, 2026
 
 **Branch with all current work: `claude/awesome-darwin-eto2cf`** (pushed; `main` still holds only the first README, and PRs #1–#3 are older, unmerged drafts). Check out this branch to continue. Read AGENTS.md and GAME_DESIGN.md first.
