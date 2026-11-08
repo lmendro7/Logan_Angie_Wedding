@@ -403,36 +403,60 @@ EYE_VARIANTS = [
 ]
 
 
-def eye_board():
-    a = STYLES[0]
+B_EYE_VARIANTS = [
+    ('1 · Current: simple dark', {}, {}),
+    ('2 · White + dark', {
+        7: ".xSSwESSSSwESSx.", 8: ".xSSEESSSSEESSx."}, {
+        7: ".xhhhsSSSSwESx..", 8: ".xhhhsSSSSEESSx."}),
+    ('3 · Brown iris + shine', {
+        7: ".xSSwiSSSSwiSSx.", 8: ".xSSiESSSSiESSx."}, {
+        7: ".xhhhsSSSSwiSx..", 8: ".xhhhsSSSSiESSx."}),
+    ('4 · Blue-grey iris + shine', {
+        7: ".xSSwuSSSSwuSSx.", 8: ".xSSuESSSSuESSx."}, {
+        7: ".xhhhsSSSSwuSx..", 8: ".xhhhsSSSSuESSx."}),
+    ('5 · Big friendly eyes', {
+        6: ".xhShhSSSShhShx.", 7: ".xSSwESSSSwESSx.", 8: ".xSSEESSSSEESSx."}, {
+        6: ".xhhhsHSShhSSx..", 7: ".xhhhsSSSSwESx..", 8: ".xhhhsSSSSEESSx."}),
+    ('6 · Happy closed (^ ^)', {
+        7: ".xSSSESSSSESSSx.", 8: ".xSSESESSESESSx."}, {
+        7: ".xhhhsSSSSSESx..", 8: ".xhhhsSSSSESESx."}),
+]
+
+
+def eye_board(style=0, variants=None, out='logan-A-eyes.png', title='style A'):
+    variants = variants or EYE_VARIANTS
+    a = STYLES[style]
+    hgt = len(a['front'])
     pal = {**a['palette'], 'i': '#6b4a32', 'u': '#5f7d94'}
     BG, INK, MUTED = '#f7efe9', '#14634a', '#5d6b64'
     colw, k = 290, 8
-    board = Image.new('RGBA', (40 + colw * len(EYE_VARIANTS), 860), BG)
+    board = Image.new('RGBA', (40 + colw * len(variants), 860), BG)
     d = ImageDraw.Draw(board, 'RGBA')
-    d.text((40, 30), 'Logan — style A eye options', font=font(40), fill=INK)
+    d.text((40, 30), f'Logan — {title} eye options', font=font(40), fill=INK)
     d.text((40, 84), 'Front and right at 8×; bottom row at 3× true size. Everything else is unchanged.',
            font=font(18, False), fill=MUTED)
     strip = Image.new('RGBA', (board.width - 80, 150), '#97b779')
-    for i, (label, front_rows, side_rows) in enumerate(EYE_VARIANTS):
+    for i, (label, front_rows, side_rows) in enumerate(variants):
         front = [front_rows.get(n, r) for n, r in enumerate(a['front'])]
         side = [side_rows.get(n, r) for n, r in enumerate(a['side'])]
         f, s = render(front, pal, label + ' front'), render(side, pal, label + ' side')
         x0 = 40 + i * colw
         d.text((x0, 130), label, font=font(18), fill=INK)
         panel = Image.new('RGBA', (colw - 20, 300), '#97b779')
-        panel.alpha_composite(f.resize((16 * k, 32 * k), Image.NEAREST), (2, 22))
-        panel.alpha_composite(s.resize((16 * k, 32 * k), Image.NEAREST), (138, 22))
+        top = 22 + (32 - hgt) * k
+        panel.alpha_composite(f.resize((16 * k, hgt * k), Image.NEAREST), (2, top))
+        panel.alpha_composite(s.resize((16 * k, hgt * k), Image.NEAREST), (138, top))
         board.alpha_composite(panel, (x0, 165))
         head = f.crop((0, 0, 16, 16)).resize((16 * 10, 16 * 10), Image.NEAREST)
         board.alpha_composite(head, (x0 + 50, 490))
-        strip.alpha_composite(f.resize((48, 96), Image.NEAREST), (i * colw + 110, 30))
+        strip.alpha_composite(f.resize((48, hgt * 3), Image.NEAREST), (i * colw + 110, 126 - hgt * 3))
     d.text((40, 650), 'True size at 3×', font=font(16, False), fill=MUTED)
     d.text((40, 470), 'Face close-up (10×)', font=font(16, False), fill=MUTED)
     board.alpha_composite(strip, (40, 670))
-    board.convert('RGB').save(OUT / 'logan-A-eyes.png', optimize=True)
+    board.convert('RGB').save(OUT / out, optimize=True)
 
 
 if __name__ == '__main__':
     main()
     eye_board()
+    eye_board(1, B_EYE_VARIANTS, 'logan-B-eyes.png', 'style B')

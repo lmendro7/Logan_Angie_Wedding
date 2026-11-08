@@ -23,3 +23,9 @@ Lucas chose style A and asked for different eyes. Six versions, everything else 
 ![Style A eye options](logan-A-eyes.png)
 
 Rebuild with `python3 tools/sprites/styles.py` (writes both boards).
+
+## Style B eye options
+
+The same six eye treatments on style B (handheld RPG):
+
+![Style B eye options](logan-B-eyes.png)
