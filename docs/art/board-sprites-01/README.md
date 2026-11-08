@@ -1,6 +1,6 @@
 # Board-style sprites 01 — Logan and Angie
 
-**Awaiting Lucas's review. Not yet in the game.**
+**Not used for map sprites.** After seeing these in the game, Lucas chose simple map sprites with the detailed models as dialogue portraits instead (see [simple-styles-01](../simple-styles-01/README.md)). These extractions may still help with the portraits.
 
 On November 8, 2026 Lucas chose the style of the approved character boards for every character, with one revision to Logan: the white shirt and black bow tie, without the jacket.
 
@@ -23,7 +23,7 @@ python3 tools/sprites/from_board.py
 
 ## Runtime sheets
 
-`public/sprites/logan-board.png` and `public/sprites/angie-board.png`: 96 × 288 px, 32 × 72 frames. Rows are down, right, up, left; columns are stand, step A, step B. Feet touch the bottom of each frame.
+`logan-board-sheet.png` and `angie-board-sheet.png` (moved out of `public/` since they are not used in the game): 96 × 288 px, 32 × 72 frames. Rows are down, right, up, left; columns are stand, step A, step B. Feet touch the bottom of each frame.
 
 Enlarged sheets: [Logan](logan-sheet-x6.png), [Angie](angie-sheet-x6.png).
 
