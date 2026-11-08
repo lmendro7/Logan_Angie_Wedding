@@ -1,5 +1,16 @@
 # Wedding game — next-session handoff
 
+## Latest gameplay revision — November 8, 2026
+
+Lucas requested a sympathetic Ryan conversation and a later discovery of the missing rings. Implemented on `claude/awesome-darwin-eto2cf`:
+
+- Bedroom opening: Logan is ready to go see Angie. Objective: head outside to meet her at the ceremony. The ring counter is hidden here.
+- First interaction with the bedroom exit: Logan realizes he does not have the rings, remembers having them last night, and decides to ask Ryan. Finish this dialogue before transitioning to the garden. Saving the room only after the dialogue avoids skipping it on reload.
+- Ryan: Logan says he cannot find the rings. Ryan says ‘Oh no. I'm sorry, man. We'll figure it out.’ He then points Logan to Sophie by the bench because she was the last person Logan was with the previous night.
+- Sophie, parents, Angie's ending, ring locations and two-ring ceremony gate remain as before. Current exact text lives in `src/content.js` and GAME_DESIGN.md. Older directions to preserve Ryan's surprised/GG exchange are historical and superseded.
+- The latest map concept's layout was accepted and its revised, chunkier cozy pixel treatment was preferred (‘Much better’). Generated map characters remain illustrative stand-ins; the new map art has not been integrated into the runtime.
+- Validation: `npm test` passes all 8 tests, including the opening objective → Ryan → Sophie progression and saved garden progress; `npm run build` and `git diff --check` pass. A browser interaction check was attempted but Chromium could not launch because this environment blocks its local socket. No browser or physical phone playtest is claimed for this revision; hosted deployment remains separate work.
+
 ## Latest art approval — November 8, 2026
 
 Lucas approved [Logan study 04](docs/art/logan-pixel-studies-02/README.md#study-04--approved-likeness-revision): "That's perfect! Let's save that to the repo and work on Angie". Exact image: `docs/art/logan-pixel-studies-02/logan-study-04-approved.png`. Preserve studies 01–03 for comparison; study 04 is the current approved concept in the new chunky pixel style.
@@ -115,7 +126,7 @@ Ryan's cap-on and lowered-waistband revision was approved with "Perfect please s
 - Logan starts dressed for the wedding in his bedroom and must find two separate rings.
 - Approved map: house/Ryan, Sophie at bench, fountain ring, parents, tree ring, gated ceremony venue with Angie.
 - Angie cannot be physically approached until both distinct rings are gathered. Gate/enclosure and interaction checks enforce this. Keep approved layout and movement.
-- Ryan exchange: Ryan: "You lost the rings?!" / Logan: "Yes and I don't remember where" / Ryan: "GG".
+- Ryan's earlier ‘You lost the rings?! / GG’ exchange is superseded by the November 8 dialogue revision at the top of this file.
 - Logan's Mother: "You lost them!!". Logan's Father: "Thats not good".
 - Angie ending: "You made it!".
 - Review art individually. Parent model details remain deferred. Keep the deadline context and open release questions in GAME_DESIGN.md rather than inventing them.

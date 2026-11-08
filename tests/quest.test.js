@@ -1,7 +1,22 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { freshProgress, collectRing, gateOpen, loadProgress, saveProgress, normalizeProgress } from '../src/quest.js';
+import { freshProgress, collectRing, gateOpen, loadProgress, saveProgress, normalizeProgress, objective } from '../src/quest.js';
 import { canStand, movePlayer, RINGS } from '../src/world.js';
+
+test('opening objective leads to the ceremony, then Ryan and Sophie after leaving', () => {
+  const p = freshProgress();
+  assert.equal(objective(p), 'Head outside to meet Angie at the ceremony.');
+  p.room = 'garden';
+  assert.equal(objective(p), 'See if Ryan knows what happened.');
+  p.met.push('ryan');
+  assert.equal(objective(p), 'Find Sophie by the garden bench.');
+  const memory = new Map();
+  const storage = { getItem: k => memory.get(k), setItem: (k, v) => memory.set(k, v) };
+  saveProgress(storage, p);
+  const restored = loadProgress(storage);
+  assert.equal(restored.room, 'garden');
+  assert.equal(objective(restored), 'Find Sophie by the garden bench.');
+});
 
 test('gate requires both distinct rings, in either collection order', () => {
   for (const order of [['fountain', 'tree'], ['tree', 'fountain']]) {

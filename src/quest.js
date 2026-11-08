@@ -21,6 +21,7 @@ export function saveProgress(storage, progress) {
 }
 export function objective(progress) {
   if (progress.completed) return 'You made it. Enjoy your day together.';
+  if (progress.room === 'bedroom') return 'Head outside to meet Angie at the ceremony.';
   if (gateOpen(progress)) return 'Both rings found! Head to Angie.';
   if (!progress.met.includes('ryan')) return 'See if Ryan knows what happened.';
   if (!progress.rings.includes('fountain')) return progress.met.includes('sophie') ? 'Search around the fountain.' : 'Find Sophie by the garden bench.';

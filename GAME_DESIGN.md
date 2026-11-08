@@ -8,7 +8,7 @@ This document records the agreed design, reference descriptions, implementation 
 
 ## 1. Purpose and experience
 
-Build a short, personalized wedding gift: a single-player, top-down pixel-art adventure starring Logan. He wakes up in his bedroom already wearing his wedding clothes, realizes he lost the wedding rings last night, and must recover them before reaching Angie at the wedding venue.
+Build a short, personalized wedding gift: a single-player, top-down pixel-art adventure starring Logan. He starts in his bedroom already wearing his wedding clothes, ready to head to Angie at the ceremony. Only when he tries to leave does he realize he does not have the rings he had the night before. He must recover both before reaching Angie at the wedding venue.
 
 Friends and family appear as NPCs. Humor, familiar people, simple clues, and exploration carry the experience.
 
@@ -53,7 +53,8 @@ Do not build the whole game and only then ask Lucas to review the map. Revisit m
 - Gate state is derived from ring progress and restored correctly after a reload. Both ring locations and all clue NPCs remain reachable outside the locked enclosure.
 - Angie's interaction also checks for both rings as a second safeguard.
 - Lucas has delegated creation of the clue sequence, subject to the agreed map review.
-- Ryan's approved exchange must remain intact; any additional clue can be discovered nearby rather than added to that exchange.
+- Logan discovers the missing rings at the bedroom doorway when he tries to leave for the ceremony, not on waking. The initial objective is to head to Angie; the ring counter stays hidden in the bedroom.
+- Ryan responds sympathetically and points Logan to Sophie by the bench, since she was the last person Logan was with the previous night. This November 8 revision supersedes Ryan's earlier surprised reaction and ‘GG’ exchange.
 - No combat, farming, multiplayer, accounts, or complex inventory is planned for the initial release.
 
 ## 5. Map layout — approved with garden gate
@@ -100,11 +101,15 @@ Short paths connect these places in the approved arrangement shown in docs/map-d
 - Appearance reference: the foreground person in the supplied Ryan photo.
 - Approved map-sprite design, November 7, 2026: skinny build; brown/off-white cap worn forward on his head; short sandy blond hair swept beneath the brim; cream short-sleeve button-down with a coral flower; sunglasses at the neckline; navy trousers with a slightly lowered waistband; brown belt and shoes. This replaces the earlier hoodie and waistband-clipped cap directions.
 - Approved reference: `docs/art/ryan-approved-01/ryan-review.png`. Exact-resolution runtime sprites, animation, and a separate detailed dialogue portrait still need preparation and review.
-- Approved dialogue, preserving Lucas's wording:
+- Revised November 8 at Lucas's request: a short, sympathetic interaction with a clear lead to Sophie. Implemented wording:
 
-> **Ryan:** You lost the rings?!  
-> **Logan:** Yes and I don't remember where  
-> **Ryan:** GG
+> **Logan:** Ryan, I can't find the rings.
+>
+> **Ryan:** Oh no. I'm sorry, man. We'll figure it out.
+>
+> **Ryan:** Sophie was the last person you were with last night. She's over by the bench—maybe she can help.
+
+The opening bedroom line is ‘Today's the wedding! Time to go see Angie.’ At the exit Logan says ‘Wait… I don't have the rings! I had them last night.’ followed by ‘I'd better ask Ryan if he remembers anything.’ The garden loads after this dialogue finishes. A reload in the garden resumes the search without replaying the discovery; a reload during the doorway dialogue leaves the player in the bedroom so the exchange is not skipped.
 
 ### Sophie — friend of Logan and Angie
 

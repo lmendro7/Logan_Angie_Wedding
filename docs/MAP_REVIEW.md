@@ -24,7 +24,7 @@ After Sophie's existing lead-in: "I think I saw you at the fountain. Maybe check
 
 After the parents' approved reactions, Father could say: "You were sitting under that tree earlier. Did you leave anything there?"
 
-Keep Ryan's three-line exchange exactly as agreed. Use a brief objective prompt to encourage exploring and talking to people without adding unapproved dialogue to his exchange.
+Updated November 8: Ryan's earlier three-line exchange is superseded by a sympathetic response and a direct lead to Sophie by the bench, since she was the last person Logan was with the previous night. See GAME_DESIGN.md and src/content.js for current wording. Logan notices the missing rings only when attempting to leave his bedroom for the ceremony.
 
 ## Review checkpoint
 

@@ -2,7 +2,7 @@ import Phaser from 'phaser';
 import './style.css';
 import { freshProgress, loadProgress, saveProgress, collectRing, gateOpen, objective } from './quest.js';
 import { GARDEN, BEDROOM, NPCS, RINGS, canStand, movePlayer } from './world.js';
-import { conversations } from './content.js';
+import { conversations, opening } from './content.js';
 
 const $ = id => document.getElementById(id);
 let storage;
@@ -35,6 +35,7 @@ function persist() {
   const ok = saveProgress(storage, progress);
   $('save-status').textContent = ok ? 'Progress saves on this device.' : 'Saving is unavailable in this browser. Keep this tab open to continue.';
   $('objective').textContent = objective(progress);
+  $('ring-count').hidden = progress.room === 'bedroom';
   $('ring-count').textContent = `${progress.rings.length} / 2 ◇`;
 }
 function showOverlay(id, focusId) {
@@ -170,7 +171,7 @@ class Adventure extends Phaser.Scene {
     $('loading')?.remove();
     $('location').textContent = this.room === 'bedroom' ? 'Logan’s bedroom' : 'The wedding garden';
     persist();
-    if (this.room === 'bedroom') say([['Logan', "Today's the wedding!"], ['Logan', 'Wait… where are the rings? I had them last night.']], () => {});
+    if (this.room === 'bedroom') say(opening.bedroom);
   }
   label(x, y, text, size = 12) {
     return this.add.text(x, y, text, { fontFamily: 'Georgia', fontSize: `${size}px`, color: '#fff5d9', backgroundColor: '#2d4939', padding: { x: 4, y: 2 } }).setOrigin(0.5).setDepth(5000).setResolution(4);
@@ -235,7 +236,11 @@ class Adventure extends Phaser.Scene {
   interact() {
     const target = this.nearest(); if (!target) return;
     if (target.id === 'exit') {
-      progress.room = 'garden'; persist(); clearInput(); this.scene.restart(); return;
+      // The first attempt to leave reveals the missing rings at the doorway.
+      // Keep the save in the bedroom until the player finishes this exchange.
+      return say(opening.departure, () => {
+        progress.room = 'garden'; persist(); clearInput(); this.scene.restart();
+      });
     }
     if (target.id === 'gate') return say([['Logan', 'I need to find both rings first!']]);
     if (RINGS.some(r => r.id === target.id)) {

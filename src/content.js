@@ -1,8 +1,16 @@
+export const opening = {
+  bedroom: [['Logan', "Today's the wedding! Time to go see Angie."]],
+  departure: [
+    ['Logan', "Wait… I don't have the rings! I had them last night."],
+    ['Logan', "I'd better ask Ryan if he remembers anything."],
+  ],
+};
+
 export const conversations = {
   ryan: [
-    ['Ryan', 'You lost the rings?!'],
-    ['Logan', "Yes and I don't remember where"],
-    ['Ryan', 'GG'],
+    ['Logan', "Ryan, I can't find the rings."],
+    ['Ryan', "Oh no. I'm sorry, man. We'll figure it out."],
+    ['Ryan', "Sophie was the last person you were with last night. She's over by the bench—maybe she can help."],
   ],
   sophie: [
     ['Logan', "Hey I lost the rings last night and I can't find them can you help me??"],
