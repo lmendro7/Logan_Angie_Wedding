@@ -4,10 +4,10 @@ Updated November 8, 2026.
 
 | Character | Appearance review | Map sprite (16 × 24, in game) | Dialogue portrait |
 | --- | --- | --- | --- |
-| Logan | Approved: [appearance 01](logan-approved-01/README.md); white shirt + bow tie preferred | [Cast 12](cast-12/README.md), awaiting review | From approved model (white shirt) |
-| Angie | Approved: [appearance 01](angie-approved-01/README.md) | Cast 12, awaiting review | From approved model |
-| Ryan | Approved: [design 01](ryan-approved-01/README.md) | Cast 12 (redrawn at 16 × 24), awaiting review | From approved board |
-| Sophie | Pending individual review | Cast 12 first draft | Stand-in (enlarged sprite) |
+| Logan | Approved: [appearance 01](logan-approved-01/README.md); white shirt + bow tie preferred | [Cast 12](cast-12/README.md), **approved Nov 8** | From approved model (white shirt) |
+| Angie | Approved: [appearance 01](angie-approved-01/README.md) | Cast 12, glasses removed per Lucas; awaiting re-review | From approved model |
+| Ryan | Approved: [design 01](ryan-approved-01/README.md) | Cast 12 (redrawn at 16 × 24), **approved Nov 8** | From approved board |
+| Sophie | Pending individual review | New outfit + tweak requested; [options](cast-12/sophie-options.png) | Stand-in (enlarged sprite) |
 | Logan's Mother | Model details deferred | Cast 12 first draft | Stand-in (enlarged sprite) |
 | Logan's Father | Model details deferred | Cast 12 first draft | Stand-in (enlarged sprite) |
 

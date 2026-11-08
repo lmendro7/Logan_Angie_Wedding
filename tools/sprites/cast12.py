@@ -123,8 +123,8 @@ ANGIE = {
                 'm': '#d7766f', 'D': '#fbf7ee', 'd': '#e3dccb', 'w': '#d9cdb4', 'O': '#e9dcc4'},
     'front': [
         ".....xxxxxx.....", "...xxHHJJHHxx...", "..xHHJHHHHJHHx..", ".xHHHHHHHHHHHHx.",
-        ".xHHHHSSSSHHHHx.", ".xHHSSSSSSSSHHx.", "xHHSSSSSSSSSSHHx", "xHHSGGGSSGGGSHHx",
-        "xHHGSESGGSESGHHx", "xHHSSSSSSSSSSHHx", "xHHHSSSmmSSSHHHx", "xHHHsSSSSSSsHHHx",
+        ".xHHHHSSSSHHHHx.", ".xHHSSSSSSSSHHx.", "xHHSSSSSSSSSSHHx", "xHHSSESSSSESSHHx",
+        "xHHSSESSSSESSHHx", "xHHSSSSSSSSSSHHx", "xHHHSSSmmSSSHHHx", "xHHHsSSSSSSsHHHx",
         "xHHhhsSSSSshhHHx", "xHHxSDSSSSDSxHHx", "xHhxSDDDDDDSxhHx", ".xxSxDDDDDDxSxx.",
         "..xSxDDDDDDxSx..", "..xsxwwwwwwxsx..",
     ],
@@ -137,8 +137,8 @@ ANGIE = {
     ],
     'side': [
         "....xxxxxx......", "...xHHHJJHxx....", "..xHHHHHHJHHx...", ".xHHHHHHHHHHHx..",
-        ".xHHHHHHHHSSSx..", "xHHHHHHHSSSSSx..", "xHHHHHHHSSSSSx..", "xHHHHHHHSSGGGx..",
-        "xHHHHHHHGGGEGSx.", "xHHHHHHHSSSSSx..", "xHHHHHHHSSSmSx..", "xHHHHHHHxSSSx...",
+        ".xHHHHHHHHSSSx..", "xHHHHHHHSSSSSx..", "xHHHHHHHSSSSSx..", "xHHHHHHHSSSESx..",
+        "xHHHHHHHSSSESSx.", "xHHHHHHHSSSSSx..", "xHHHHHHHSSSmSx..", "xHHHHHHHxSSSx...",
         "xHHHHHHhxxSSx...", "xHHHHxSSDDDx....", "xhHHHxSDDDDx....", "..xxxDSDDDx.....",
         "....xDSDDDx.....", "....xwswwwx.....",
     ],

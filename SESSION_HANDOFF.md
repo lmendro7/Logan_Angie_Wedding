@@ -45,7 +45,7 @@ This update publishes the recovered approved Ryan image, retained studies, curre
 ## Current state — November 8, 2026 (latest)
 
 - **Style chosen:** map sprites in full-colour style 12 (older Pokémon meets Stardew), all characters 16 × 24, detailed models as dialogue portraits. Implemented in the game on branch `claude/awesome-darwin-eto2cf`: `public/sprites/*.png` (built by `tools/sprites/cast12.py`), `public/portraits/*.png` (`tools/sprites/portraits.py`), walking animation, characters facing Logan when he talks, y-sorting, camera zoom 1.5×. See `docs/art/cast-12/README.md`.
-- **Needs review:** all six sprites in this style; Sophie and the parents are first drafts with stand-in portraits.
+- **Reviewed:** Logan and Ryan sprites approved. Angie: glasses removed, awaiting re-review. Sophie: new outfit + slight design change requested; options in `docs/art/cast-12/sophie-options.png` (tools/sprites/sophie_options.py). Parents: first drafts, not yet reviewed.
 - **Next:** take Lucas's feedback per character; make detailed portrait models for Sophie and the parents; scenery art is still placeholder.
 - Older explorations (16×32 sprites, style boards, LPC rebuilds, board extractions) are history in `docs/art/`.
 

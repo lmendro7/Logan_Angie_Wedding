@@ -8,10 +8,10 @@
 
 | Character | Status |
 | --- | --- |
-| Logan | From his approved model: short dirty-blond hair, short beard, white shirt and black bow tie (his preferred look), black trousers. Awaiting review in this style. |
-| Angie | From her approved model: wavy brown hair, glasses, white gown. Awaiting review in this style. |
-| Ryan | From his approved design: cap worn forward, blond hair, cream flower shirt, sunglasses, navy trousers. Redrawn at 16 × 24 to match; awaiting review in this style. |
-| Sophie | First draft: short black bob, pale skin, lavender dress (outfit is a proposal). Needs individual review. |
+| Logan | **Approved November 8, 2026.** Short dirty-blond hair, short beard, white shirt and black bow tie, black trousers. |
+| Angie | Wavy brown hair, white gown. Glasses removed and regular eyes given at Lucas's request (November 8); awaiting re-review. |
+| Ryan | **Approved November 8, 2026.** Cap worn forward, blond hair, cream flower shirt, sunglasses, navy trousers. |
+| Sophie | Lucas asked for a different outfit and a slight design adjustment. Options board: [sophie-options.png](sophie-options.png) (outfits 1–6, tweaks A–E). |
 | Logan's Mother | First draft: dirty-blond hair, dusty-rose dress (details were deferred). Needs review. |
 | Logan's Father | First draft: dirty-blond hair, slate-blue suit and tie (details were deferred). Needs review. |
 
@@ -36,3 +36,9 @@ python3 tools/sprites/portraits.py  # dialogue portraits
 ```
 
 All map-sprite pixels are original and hand-placed. Portrait credits are in `public/LICENSES.txt`.
+
+## Sophie options
+
+![Sophie options](sophie-options.png)
+
+Rebuild: `python3 tools/sprites/sophie_options.py`.
