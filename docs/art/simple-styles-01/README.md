@@ -21,3 +21,11 @@ Seven hand-drawn base figures are combined with outline, shading and palette tre
 Rebuild: `python3 tools/sprites/simple_styles.py`.
 
 The detailed Logan and Angie models are kept for the dialogue portraits: see the approved boards and [board-sprites-01](../board-sprites-01/README.md), which is no longer the map-sprite plan.
+
+## In-game previews: styles 13 and 20
+
+Temporary local build (not committed), Chromium at a 390 × 844 phone viewport. Logan stands still (only front and side views exist so far) beside Ryan's approved sprite in the garden, and in the bedroom.
+
+![Style 13 in game](ingame-style13.png)
+
+![Style 20 in game](ingame-style20.png)
