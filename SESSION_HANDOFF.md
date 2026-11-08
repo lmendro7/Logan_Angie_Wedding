@@ -44,6 +44,7 @@ This update publishes the recovered approved Ryan image, retained studies, curre
 
 ## Current state — November 8, 2026 (latest, after the playtest)
 
+- **Cozy scenery in the game:** garden, house, fountain, trees, ceremony and bedroom painted in the Cozy Garden style (`tools/env/build_env.py`, `public/env/`, `docs/art/env/`). Layout and collisions unchanged; butterflies, fountain ripples, twinkling rings and a swinging gate added.
 - **Cozy Garden style in the game:** Lucas found the 16 × 24 sprites too pixelated and gave full creative freedom. All six characters are redrawn at 16 × 32 (`tools/sprites/cozy.py`, `docs/art/cozy/`), and the canvas renders at device pixel density with whole-number zoom. Playtest page: https://claude.ai/artifact/F4Zff8ygkY8qzZFcvbQTuj (private to Lucas). Awaiting his reaction; parents still drafts; detailed portraits for Sophie and the parents still to make.
 
 ## Previous state — November 8, 2026

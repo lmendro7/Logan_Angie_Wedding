@@ -1,7 +1,7 @@
 Runtime license notices
 
 Character map sprites (public/sprites) are original hand-placed pixel art made for this game.
-No Stardew Valley or Pokémon assets are included. Scenery is original code-drawn placeholder art.
+No Stardew Valley or Pokémon assets are included. Scenery (public/env) is original pixel art made for this game.
 
 Dialogue portraits
 ------------------

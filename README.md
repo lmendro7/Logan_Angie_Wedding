@@ -10,7 +10,7 @@ Read [SESSION_HANDOFF.md](SESSION_HANDOFF.md), [session notes](docs/SESSION_NOTE
 
 The first playable foundation implements the approved garden layout, bedroom opening, touch/keyboard movement, character dialogue, two separate ring discoveries, device-local progress, and a ceremony gate that opens only after both rings are collected.
 
-**This is a review build.** Characters use the hand-drawn Cozy Garden style (16 × 32, Stardew-like comfort with a touch of Pokémon) with detailed portraits in conversations; see [docs/art/cozy](docs/art/cozy/README.md). Scenery is still original code-drawn placeholder art. Remaining individual character reviews, runtime sprite preparation, dialogue portraits, and environment asset selection are still ahead. The clue endings, opening lines, title, and extra ending-screen wording are provisional. No reference photos are shipped.
+**This is a review build.** Characters use the hand-drawn Cozy Garden style (16 × 32, Stardew-like comfort with a touch of Pokémon) with detailed portraits in conversations; see [docs/art/cozy](docs/art/cozy/README.md). The scenery (garden, house, ceremony, bedroom) is painted in the same style; see [docs/art/env](docs/art/env/README.md). Remaining individual character reviews, runtime sprite preparation, dialogue portraits, and environment asset selection are still ahead. The clue endings, opening lines, title, and extra ending-screen wording are provisional. No reference photos are shipped.
 
 ## Run locally
 
@@ -46,6 +46,7 @@ The build produces a static `dist/` directory with the engine bundled locally; i
 - `tests/quest.test.js`: quest, save recovery, collision, and reachability checks.
 - `tests/sprites.test.js`: every character has a correctly sized sprite sheet and portrait.
 - `tools/sprites/`: scripts that build the sprites (`cozy.py`) and portraits (`portraits.py`).
+- `tools/env/`: the script that paints the scenery (`build_env.py`) and composes review images (`preview.py`).
 - `public/LICENSES.txt`: runtime dependency license notices.
 
 ## Validation and remaining reviews

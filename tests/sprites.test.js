@@ -23,3 +23,12 @@ test('every speaker has a 96 x 96 dialogue portrait', () => {
     assert.deepEqual(size(`portraits/${id}.png`), [96, 96], id);
   }
 });
+
+test('scenery art exists and matches the map and room sizes', async () => {
+  const { GARDEN, BEDROOM } = await import('../src/world.js');
+  assert.deepEqual(size('env/garden.png'), [GARDEN.width, GARDEN.height]);
+  assert.deepEqual(size('env/bedroom.png'), [BEDROOM.width, BEDROOM.height]);
+  for (const name of ['house', 'tree', 'blossom', 'bench', 'arch', 'gate-closed', 'gate-open', 'fountain', 'butterfly', 'ring']) {
+    assert.ok(size(`env/${name}.png`)[0] > 0, name);
+  }
+});
