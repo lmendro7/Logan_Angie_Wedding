@@ -37,10 +37,10 @@ Skinny build; brown cap with an off-white front panel and gray-blue logo, worn f
 
 ## Rebuild and provenance
 
-`build_sprite.py` holds every pixel as text grids plus the palette, and regenerates all images here (requires Pillow):
+Ryan's pixel grids now live in the shared sprite tool, `tools/sprites/characters.py`, which builds every character. The runtime sheet is written to `public/sprites/ryan.png` and is identical to `ryan-sheet.png` here. To rebuild (requires Pillow):
 
 ```sh
-python3 build_sprite.py
+python3 tools/sprites/build.py
 ```
 
 The pixels are original and hand-placed, using the approved design board as the visual reference. No LPC layers, Stardew Valley or Pokémon assets and no personal photo pixels are used. The detailed dialogue portrait is a separate asset that is still to be made.
