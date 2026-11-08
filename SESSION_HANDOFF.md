@@ -1,8 +1,12 @@
 # Wedding game — next-session handoff
 
-## Latest art exploration — November 8, 2026
+## Latest art approval — November 8, 2026
 
-Lucas requested an original Logan study closer to Stardew Valley's pixel-art language. Preserve [study 01](docs/art/logan-pixel-studies-02/README.md): he likes the style and explicitly requested keeping it saved. He then requested less formal hair and a more pixelated treatment. Study 02 explores relaxed tousled hair and chunkier sprite/portrait shapes; Lucas called it "much better" and requested shorter hair. Study 03 shortens the top, fringe, sides and back and awaits visual review. All three boards are appearance concepts, not runtime sprite sheets or actual game screenshots. The running game still uses the Cozy Garden assets described below. Keep the white shirt and black bow tie, youthful slim face, dirty-blond hair and short matching beard. This exploration does not approve a cast-wide replacement or a map change.
+Lucas approved [Logan study 04](docs/art/logan-pixel-studies-02/README.md#study-04--approved-likeness-revision): "That's perfect! Let's save that to the repo and work on Angie". Exact image: `docs/art/logan-pixel-studies-02/logan-study-04-approved.png`. Preserve studies 01–03 for comparison; study 04 is the current approved concept in the new chunky pixel style.
+
+Preserve the youthful lean face, softer jaw, rounded nose, short casual muted dirty-blond hair, lighter short matching beard, understated eyes/brows, slim body, white shirt, black bow tie, black trousers and shoes. The board includes front/side/back views and neutral/worried/relieved portraits. It remains an appearance reference, not an animation-ready sheet or finished portrait crops; the running game still uses Cozy Garden assets. Review production assets at phone size before integration. No map or gameplay changes accompany this save.
+
+Next: draft Angie in this same pixel treatment using `docs/art/angie-approved-01/angie-review.png` for likeness. Preserve the elongated oval face, slim arms, shoulder-length softly wavy brown hair, white sleeveless square-neck dress with broad straps and fitted waist, short veil, and the current glasses distinction (no glasses on map sprites, glasses on dialogue portraits). New-style Angie artwork awaits Lucas's review; older approvals are retained.
 
 ## START HERE — state at the end of November 8, 2026
 

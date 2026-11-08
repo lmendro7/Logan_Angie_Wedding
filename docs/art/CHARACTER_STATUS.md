@@ -2,6 +2,8 @@
 
 Updated November 8, 2026.
 
+**Latest concept approval:** Logan [study 04](logan-pixel-studies-02/README.md#study-04--approved-likeness-revision) is approved in the new chunky pixel style, including the lighter beard, rounded nose and compact casual dirty-blond hair. The exact approved board is saved; production sprites/portrait crops are pending. Angie is next for this style and requires a new visual review. Current runtime assets remain Cozy Garden (16 × 32).
+
 | Character | Appearance review | Map sprite (16 × 24, in game) | Dialogue portrait |
 | --- | --- | --- | --- |
 | Logan | Approved: [appearance 01](logan-approved-01/README.md); white shirt + bow tie preferred | [Cast 12](cast-12/README.md), **approved Nov 8** | From approved model (white shirt) |
