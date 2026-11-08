@@ -8,7 +8,11 @@
 
 This rebuilds Logan in the style of his [approved board](../logan-approved-01/README.md), which started from the LPC layers in [draft 01](../logan-draft-01/README.md). The approved board itself is a single still image with no walking frames, so the game needs a rebuilt sheet.
 
-## Current build: "young" (revision 3)
+## Current build: "distinguished" (revision 4)
+
+Revision 4 removes the cardigan: white shirt and black bow tie, which Lucas found more distinguished. Everything else is as in revision 3.
+
+## Revision 3: "young"
 
 Lucas found revision 2 too old-looking, with a "henchman" stance. Revision 3:
 

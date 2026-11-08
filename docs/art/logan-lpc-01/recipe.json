@@ -19,7 +19,7 @@
   576,
   768
  ],
- "status": "original-style rebuild \"young\" for review; not integrated into live game",
+ "status": "original-style rebuild \"distinguished\" for review; not integrated into live game",
  "changes": "Layer composition; four-direction walk frames only; hair, beard and skin-shadow recolouring (see tools/sprites/lpc_logan.py). No photo pixels used. Preview enlargements use nearest-neighbour scaling.",
  "layers": [
   {
@@ -113,26 +113,6 @@
    "recolour": null,
    "credits": {
     "file": "torso/clothes/longsleeve/longsleeve2_buttoned",
-    "notes": "original by ElizaWy; spellcast/thrust/shoot/hurt adapted from original by JaidynReiman",
-    "authors": [
-     "ElizaWy",
-     "JaidynReiman"
-    ],
-    "licenses": [
-     "OGA-BY 3.0"
-    ],
-    "urls": [
-     "http://opengameart.org/content/lpc-revised-character-basics",
-     "https://github.com/ElizaWy/LPC/tree/main/Characters/Clothing",
-     "https://opengameart.org/content/expanded-universal-lpc-spritesheet-idle-run-jump-lpc-revised-combat-and-assets"
-    ]
-   }
-  },
-  {
-   "path": "spritesheets/torso/clothes/longsleeve/longsleeve2_cardigan/teen/black.png",
-   "recolour": "open",
-   "credits": {
-    "file": "torso/clothes/longsleeve/longsleeve2_cardigan",
     "notes": "original by ElizaWy; spellcast/thrust/shoot/hurt adapted from original by JaidynReiman",
     "authors": [
      "ElizaWy",

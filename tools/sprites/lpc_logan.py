@@ -50,7 +50,9 @@ BUILDS = {
         ('hair/cowlick/adult/light_brown.png', 'hair'),
     ],
 }
-BUILD = 'young'
+# Revision 4: Lucas preferred the white shirt and bow tie without the cardigan.
+BUILDS['distinguished'] = [l for l in BUILDS['young'] if 'cardigan' not in l[0]]
+BUILD = 'distinguished'
 
 LPC_RAMP = [(26, 14, 4), (48, 27, 7), (96, 53, 15), (125, 69, 19), (174, 104, 42), (200, 141, 88)]
 # From the reference photos: light ash-brown hair, lighter on top; warmer ginger-brown beard.
