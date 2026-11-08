@@ -75,6 +75,9 @@ def main():
     RUNTIME.mkdir(parents=True, exist_ok=True)
     REVIEW.mkdir(parents=True, exist_ok=True)
     all_rows = {}
+    # Rejected drafts stay in characters.py for reference but are not published.
+    for cid in [c for c in CHARACTERS if 'rejected' in CHARACTERS[c]['status']]:
+        del CHARACTERS[cid]
     for cid in CHARACTERS:
         rows = frames_for(cid)
         all_rows[cid] = rows
