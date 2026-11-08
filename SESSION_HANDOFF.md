@@ -1,5 +1,39 @@
 # Wedding game — next-session handoff
 
+## START HERE — state at the end of November 8, 2026
+
+**Branch with all current work: `claude/awesome-darwin-eto2cf`** (pushed; `main` still holds only the first README, and PRs #1–#3 are older, unmerged drafts). Check out this branch to continue. Read AGENTS.md and GAME_DESIGN.md first.
+
+**Playtest page (private to Lucas):** https://claude.ai/artifact/F4Zff8ygkY8qzZFcvbQTuj. Rebuild it with `npm run playtest` (writes `playtest-dist/play.html`; see `tools/playtest/make_page.py` for how to republish).
+
+**What the game looks like now**
+- Characters: the **Cozy Garden** style, 16 × 32, Stardew-like comfort with a touch of Pokémon, designed with Lucas's full creative go-ahead (`tools/sprites/cozy.py` → `public/sprites/`, notes in `docs/art/cozy/`).
+- Scenery: garden, cottage, fountain, trees (pink blossom tree at the second ring), bench, ceremony arch and aisle, swinging gate, butterflies, bedroom, all in the same style (`tools/env/build_env.py` → `public/env/`, notes in `docs/art/env/`). Layout and collisions are unchanged from the approved map.
+- Dialogue: detailed portraits beside the speaker's name (`tools/sprites/portraits.py` → `public/portraits/`).
+- Rendering: canvas at device pixel density with whole-number camera zoom (crisp pixels on phones).
+- Rebuild all art: `npm run art`. Tests: `npm test` (7 passing). Build: `npm run build`.
+
+**Character decisions in force**
+| Character | Current |
+| --- | --- |
+| Logan | White shirt and black bow tie (no jacket), short dirty-blond hair, short beard. Sprite approved. Portrait from his approved model with the white shirt. |
+| Angie | Sprite: no glasses, short veil, wavy brown hair, white gown. Portrait: approved model **with glasses**, plus the veil (Lucas). |
+| Ryan | Cap, blond hair, cream flower shirt, sunglasses, navy trousers. Sprite approved. Portrait from his approved board. |
+| Sophie | Long dark hair with caramel streaks (from Lucas's reference photos, not stored), skinny, small nose, olive dress. Portrait is a stand-in (enlarged sprite). |
+| Logan's Mother / Father | Drafts (dusty-rose dress / slate-blue suit and tie); details were deferred. Stand-in portraits. |
+
+**Open next steps**
+1. Lucas's feedback on the Cozy Garden characters and scenery from the playtest.
+2. Detailed portraits for Sophie and the parents (they use enlarged sprites now).
+3. Parents' designs still need review.
+4. Release review before any public sharing (see GAME_DESIGN.md).
+
+Personal reference photos must never be committed. All art in `public/` is original except the Logan and Angie portraits, whose LPC credits are in `public/LICENSES.txt`.
+
+---
+
+## History (older notes, kept for context)
+
 Updated November 7, 2026 after Ryan's map-sprite approval. Read AGENTS.md, GAME_DESIGN.md, docs/SESSION_NOTES.md, and docs/art/ART_DIRECTION.md before continuing.
 
 Lucas approved publishing Ryan's artwork and design notes and gave standing approval for all Git commits and publishing for this project indefinitely. This authorization includes saving the earlier pending art and project handoff work. See AGENTS.md for the project scope.
