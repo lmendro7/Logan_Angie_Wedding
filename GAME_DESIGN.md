@@ -87,7 +87,7 @@ Short paths connect these places in the approved arrangement shown in docs/map-d
 - Appearance reference: the woman in the supplied couple photos.
 - Approved appearance: shoulder-length softly wavy brown hair, glasses, light skin, and a white sleeveless wedding dress with broad straps, a square neckline, fitted waist, and flared skirt.
 - Slim arms and an elongated oval face with a softly tapering jaw and gently rounded chin, guided by the supplied couple photos.
-- **Map sprite, November 8, 2026:** Lucas asked to remove the glasses and give her regular eyes. (The approved detailed model, used for her dialogue portrait, still shows glasses.)
+- **November 8, 2026:** Lucas asked to remove the glasses and give her regular eyes, then to add a short veil. Both the map sprite and the dialogue portrait now show her without glasses and with the veil.
 - Waits at the venue beneath a flower arch.
 - Appearance approved November 7, 2026: see `docs/art/angie-approved-01/README.md`. Animation-ready sprites still need preparation and verification before integration.
 - Approved ending dialogue:
@@ -110,6 +110,7 @@ Short paths connect these places in the approved arrangement shown in docs/map-d
 
 - Shy, funny, sarcastic, very introverted.
 - Short, black hair, pale skin.
+- **November 8, 2026:** Lucas asked for a skinnier model and a smaller nose, and supplied reference photos (kept out of the repository). They show long dark hair with caramel-blonde streaks, dark-framed glasses and an olive-green top; options in docs/art/cast-12/sophie-photo-options.png await his pick.
 - Gives the clue toward the first ring.
 - Dialogue direction supplied by Lucas; location wording remains pending:
 

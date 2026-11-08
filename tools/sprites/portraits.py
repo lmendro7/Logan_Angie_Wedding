@@ -3,7 +3,7 @@
     python3 tools/sprites/portraits.py
 
 Logan: his approved model with the white shirt and bow tie (from
-docs/art/board-sprites-01). Angie: her approved model. Ryan: his approved
+docs/art/board-sprites-01). Angie: her approved model, without glasses and with her veil (Lucas, November 8). Ryan: his approved
 design board. Sophie and the parents have no detailed model yet, so their
 map sprite is enlarged as a stand-in until their models are made.
 Writes public/portraits/<id>.png (crisp pixel art; scale with nearest-neighbour).
@@ -26,6 +26,44 @@ def fit(img, scale):
     return canvas
 
 
+def angie_no_glasses_veil():
+    """Angie's model without glasses (Lucas, Nov 8) and with her veil."""
+    img = Image.open(BOARDS / 'angie-front.png').convert('RGBA')
+    px = img.load()
+    skin, skin_sh, eye, lash = (249, 207, 158), (231, 178, 126), (58, 38, 26), (40, 26, 18)
+    for y in range(11, 20):                     # glasses frames and lens tint -> skin
+        for x in range(8, 20):
+            r, g, b, a = px[x, y]
+            if not a:
+                continue
+            lum, sat = (r + g + b) / 3, (max(r, g, b) - min(r, g, b)) / max(r, g, b, 1)
+            dark = lum < 115
+            brown_edge = y >= 12 and r > 120 and g < 120 and b < 80 and r - b > 60
+            grey = y >= 12 and sat < 0.32 and 95 < lum < 225
+            mid_brown = y >= 16 and r > 150 and 95 < g < 175 and b < 130 and r - b > 55 and not (r > 200 and g < 160)
+            if dark or brown_edge or grey or mid_brown:
+                px[x, y] = skin if 13 <= y <= 17 else skin_sh
+    for xy in [(10, 14), (11, 14), (10, 15), (11, 15), (16, 14), (17, 14), (16, 15), (17, 15)]:
+        px[xy] = eye
+    for xy in [(9, 13), (10, 13), (11, 13), (16, 13), (17, 13), (18, 13)]:
+        px[xy] = lash
+    veil, veil_sh = (248, 245, 238), (222, 216, 204)
+    w, h = img.size
+    for x in range(w):                          # veil band across the top of her hair
+        for y in (2, 3):
+            if px[x, y][3]:
+                px[x, y] = veil if y == 2 else veil_sh
+    for y in range(4, h):                       # veil falling along both sides
+        row = [x for x in range(w) if px[x, y][3]]
+        if row:
+            px[row[0], y] = veil_sh
+            px[row[-1], y] = veil_sh
+            if len(row) > 2:
+                px[row[1], y] = veil
+                px[row[-2], y] = veil
+    return img
+
+
 def from_extraction(name, rows):
     pose = Image.open(BOARDS / name).convert('RGBA')
     return pose.crop((0, 0, pose.width, rows))
@@ -46,7 +84,7 @@ def ryan_from_board():
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
     fit(from_extraction('logan-shirt-front.png', 31), 3).save(OUT / 'logan.png')
-    fit(from_extraction('angie-front.png', 32), 3).save(OUT / 'angie.png')
+    fit(angie_no_glasses_veil().crop((0, 0, 27, 32)), 3).save(OUT / 'angie.png')
     fit(ryan_from_board(), 2).save(OUT / "ryan.png")
     sheets = ROOT / 'public' / 'sprites'
     for cid in ('sophie', 'mother', 'father'):

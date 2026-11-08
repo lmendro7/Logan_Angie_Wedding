@@ -9,9 +9,9 @@
 | Character | Status |
 | --- | --- |
 | Logan | **Approved November 8, 2026.** Short dirty-blond hair, short beard, white shirt and black bow tie, black trousers. |
-| Angie | Wavy brown hair, white gown. Glasses removed and regular eyes given at Lucas's request (November 8); awaiting re-review. |
+| Angie | Wavy brown hair, white gown, regular eyes (no glasses), and a short veil (Lucas, November 8). Her portrait matches: glasses removed and veil added. |
 | Ryan | **Approved November 8, 2026.** Cap worn forward, blond hair, cream flower shirt, sunglasses, navy trousers. |
-| Sophie | Lucas asked for a different outfit and a slight design adjustment. Options board: [sophie-options.png](sophie-options.png) (outfits 1–6, tweaks A–E). |
+| Sophie | Skinnier body and a smaller nose requested; reference photos supplied (not stored here). Latest options: [sophie-photo-options.png](sophie-photo-options.png). Earlier boards: outfits/tweaks, skinny. |
 | Logan's Mother | First draft: dirty-blond hair, dusty-rose dress (details were deferred). Needs review. |
 | Logan's Father | First draft: dirty-blond hair, slate-blue suit and tie (details were deferred). Needs review. |
 
@@ -52,3 +52,13 @@ Lucas liked Angie without glasses but wanted a little more detail, and asked for
 ![Sophie skinnier](sophie-skinny-options.png)
 
 Rebuild: `python3 tools/sprites/angie_sophie_options.py`.
+
+## Angie's veil and Sophie's photo-guided options (November 8)
+
+Angie keeps her no-glasses model and gains a short veil (band on top, falling behind her hair), on the map sprite and the portrait.
+
+Sophie: Lucas asked for a smaller nose and attached reference photos, which are not stored in the repository. They show long dark hair with caramel-blonde streaks, dark-framed glasses, an olive-green top and a small nose.
+
+![Sophie photo-guided options](sophie-photo-options.png)
+
+Rebuild: `python3 tools/sprites/sophie_photo.py`.

@@ -143,6 +143,30 @@ ANGIE = {
         "....xDSDDDx.....", "....xwswwwx.....",
     ],
 }
+# Angie wears a short veil (Lucas, November 8, 2026): a veil band on top of her
+# head, falling behind her hair. Applied to her current no-glasses model.
+_ANGIE_VEIL = {
+    'front': {1: "...xxVVVVVVxx...", 2: "..xVHJHHHHJHVx..", 6: "VHHSSSSSSSSSSHHV", 9: "VHHSSSSSSSSSSHHV",
+              12: "VHHhhsSSSSshhHHV"},
+    'side': {1: "...xVVVVVVxx....", 2: "..VVVHHHHJHHx...", 3: ".VVVHHHHHHHHx...", 5: "VVHHHHHHSSSSSx..",
+             8: "VVHHHHHHSSSESSx.", 11: "VvHHHHHHxSSSx...", 13: "VvHHHxSSDDDx....", 14: "vvHHHxSDDDDx...."},
+    'back': {1: "...xxVVVVVVxx...", 2: "..xVVVVVVVVVVx..", 3: ".xVVVVVVVVVVVVx.", 4: ".xVVvVVVVVVvVVx.",
+             5: ".xVVVVVVVVVVVVx.", 6: "xHVVVVVVVVVVVVHx", 7: "xHVvVVVVVVVVvVHx", 8: "xHVVVVVVVVVVVVHx",
+             9: "xHVVVVVVVVVVVVHx", 10: "xHVVvVVVVVVvVVHx", 11: "xHhVVVVVVVVVVhHx", 12: "xHHvVVVVVVVVvHHx",
+             13: "xHHHvVVVVVVvHHHx"},
+}
+for _view, _rows in _ANGIE_VEIL.items():
+    for _n, _r in _rows.items():
+        ANGIE[_view][_n] = _r
+ANGIE['palette'].update({'V': '#f6f3ec', 'v': '#ddd8cc'})
+# Continuous veil edges: down both sides from the front, behind the head from the side.
+for _n in range(6, 15):
+    _r = ANGIE['front'][_n]
+    ANGIE['front'][_n] = 'V' + _r[1:-1] + 'V'
+for _n in range(3, 15):
+    _r = ANGIE['side'][_n]
+    ANGIE['side'][_n] = ('Vv' if _n > 10 else 'VV') + _r[2:]
+
 SOPHIE = {
     'name': 'Sophie', 'legs': DRESS, 'draft': True,
     'palette': {'S': '#fbe3d3', 's': '#e6bfa6', 'E': '#2a2026', 'm': '#9c5f5f',
