@@ -11,7 +11,7 @@
 | Logan | **Approved November 8, 2026.** Short dirty-blond hair, short beard, white shirt and black bow tie, black trousers. |
 | Angie | Wavy brown hair, white gown, regular eyes (no glasses), and a short veil (Lucas, November 8). Her portrait keeps her glasses (Lucas) and adds the veil. |
 | Ryan | **Approved November 8, 2026.** Cap worn forward, blond hair, cream flower shirt, sunglasses, navy trousers. |
-| Sophie | Skinnier body and a smaller nose requested; reference photos supplied (not stored here). Latest options: [sophie-photo-options.png](sophie-photo-options.png). Earlier boards: outfits/tweaks, skinny. |
+| Sophie | **Chosen November 8, 2026:** long dark hair with caramel streaks (from Lucas's reference photos, not stored here), skinnier body, small nose, olive dress. In the game; portrait is a stand-in (enlarged sprite) until a detailed model is made. |
 | Logan's Mother | First draft: dirty-blond hair, dusty-rose dress (details were deferred). Needs review. |
 | Logan's Father | First draft: dirty-blond hair, slate-blue suit and tie (details were deferred). Needs review. |
 

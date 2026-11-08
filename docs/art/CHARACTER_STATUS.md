@@ -7,7 +7,7 @@ Updated November 8, 2026.
 | Logan | Approved: [appearance 01](logan-approved-01/README.md); white shirt + bow tie preferred | [Cast 12](cast-12/README.md), **approved Nov 8** | From approved model (white shirt) |
 | Angie | Approved: [appearance 01](angie-approved-01/README.md) | Cast 12: no glasses, short veil (Lucas, Nov 8) | From approved model, with glasses, veil added |
 | Ryan | Approved: [design 01](ryan-approved-01/README.md) | Cast 12 (redrawn at 16 × 24), **approved Nov 8** | From approved board |
-| Sophie | Pending; photos supplied (not stored) | Skinnier + smaller nose; [photo-guided options](cast-12/sophie-photo-options.png) | Stand-in (enlarged sprite) |
+| Sophie | Long dark hair with caramel streaks, guided by photos (not stored) | Cast 12: chosen Nov 8 (long streaked hair, skinny, small nose, olive dress) | Stand-in (enlarged sprite) |
 | Logan's Mother | Model details deferred | Cast 12 first draft | Stand-in (enlarged sprite) |
 | Logan's Father | Model details deferred | Cast 12 first draft | Stand-in (enlarged sprite) |
 

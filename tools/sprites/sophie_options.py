@@ -12,7 +12,7 @@ from pathlib import Path
 from PIL import Image, ImageDraw
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from cast12 import DRESS, SOPHIE, TROUSERS, frame        # noqa: E402
+from cast12 import DRESS, SOPHIE_DRAFT1 as SOPHIE, TROUSERS, frame        # noqa: E402
 from styles import font                                   # noqa: E402
 
 OUT = Path(__file__).resolve().parents[2] / 'docs' / 'art' / 'cast-12'

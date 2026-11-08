@@ -167,7 +167,7 @@ for _n in range(3, 15):
     _r = ANGIE['side'][_n]
     ANGIE['side'][_n] = ('Vv' if _n > 10 else 'VV') + _r[2:]
 
-SOPHIE = {
+SOPHIE_DRAFT1 = {
     'name': 'Sophie', 'legs': DRESS, 'draft': True,
     'palette': {'S': '#fbe3d3', 's': '#e6bfa6', 'E': '#2a2026', 'm': '#9c5f5f',
                 'h': '#15161b', 'H': '#25272f', 'J': '#3e4250', 'V': '#9583b0', 'v': '#76679a',
@@ -243,14 +243,58 @@ def derive_back(c, long_hair=False):
     return out
 
 
-SOPHIE['back_cloth'] = {'S': 'V'}
+SOPHIE_DRAFT1['back_cloth'] = {'S': 'V'}
 MOTHER['back_cloth'] = {'S': 'V'}
 FATHER['back_cloth'] = {'W': 'K', 'X': 'K'}
-SOPHIE['back'] = derive_back(SOPHIE)
+SOPHIE_DRAFT1['back'] = derive_back(SOPHIE_DRAFT1)
 MOTHER['back'] = derive_back(MOTHER, long_hair=True)
 FATHER['back'] = derive_back(FATHER)
 for y in range(15, 17):                                   # Father: plain jacket back, no tie
     FATHER['back'][y] = FATHER['back'][y].replace('X', 'K')
+
+
+# Sophie, chosen by Lucas (November 8, 2026): option 2 from sophie-photo-options,
+# guided by his reference photos: long dark hair with caramel streaks framing her
+# face, skinnier body, small nose (no nose pixel; flush profile), olive dress.
+SLIM_DRESS = {
+    'front': [
+        ["...xVVVVVVVVx...", "..xvVVVVVVVVvx..", "..xxxxxxxxxxxx..", ".....xSxxSx.....", "....xOOxxOOx....", "....xxxxxxxx...."],
+        ["...xVVVVVVVVx...", "..xvVVVVVVVVvx..", "..xxxxxxxxxxxx..", "....xOOxxSx.....", "....xxxxxOOx....", "........xxxx...."],
+        ["...xVVVVVVVVx...", "..xvVVVVVVVVvx..", "..xxxxxxxxxxxx..", ".....xSxxOOx....", "....xOOxxxxx....", "....xxxx........"],
+    ],
+    'side': [
+        [".....xVVVVx.....", "....xvVVVVVx....", "....xxxxxxxx....", "......xSSx......", ".....xOOOOx.....", ".....xxxxxx....."],
+        [".....xVVVVx.....", "....xvVVVVVx....", "....xxxxxxxx....", ".....xSxxSx.....", "....xOOxxOOOx...", "....xxxxxxxxx..."],
+        [".....xVVVVx.....", "....xvVVVVVx....", "....xxxxxxxx....", ".....xSxxSx.....", "....xOOxxOOOx...", "....xxxxxxxxx..."],
+    ],
+}
+SOPHIE = {
+    'name': 'Sophie', 'legs': SLIM_DRESS,
+    'palette': {'S': '#fbe3d3', 's': '#e6bfa6', 'E': '#2a2026', 'm': '#d08f8a',
+                'h': '#1a1512', 'H': '#2b2420', 'J': '#b8925e',
+                'V': '#6b7044', 'v': '#525634', 'O': '#1d1d22'},
+    'front': [
+        ".....xxxxxx.....", "....xHHHHHHx....", "...xHHHhhHHHx...", "..xHHHHSSHHHHx..",
+        "..xHHHSSSSHHHx..", "..xHJSSSSSSJHx..", "..xJSSSSSSSSJx..", "..xJSESSSSESJx..",
+        "..xJSESSSSESJx..", "..xJSSSSSSSSJx..", "..xJSSSSmmSSJx..", "..xHJxSSSSxJHx..",
+        "..xHJxxSSxxJHx..", "..xJxVVSSVVxJx..", "..xJxvVVVVvxJx..", "..xHxVVVVVVxHx..",
+        "..xSxVVVVVVxSx..", "..xsxvvvvvvxsx..",
+    ],
+    'side': [
+        "....xxxxxx......", "...xHHHHHHx.....", "..xHHHHHHHHx....", "..xHHHHHHHHHx...",
+        "..xHHHHHHHSSx...", "..xHHHHHJSSSx...", "..xHHHHHJSSSx...", "..xHHHHsJSESx...",
+        "..xHHHHsJSESx...", "..xHHHHHJSSSx...", "..xHHHHHJSmSx...", "..xHHHHHxSSx....",
+        "..xHHHHHxSSx....", "..xHHxVVVVx.....", "..xHHxvVVVx.....", "...xHxvSVVx.....",
+        ".....xvSVVx.....", ".....xvsvvx.....",
+    ],
+    'back': [
+        ".....xxxxxx.....", "....xHHHHHHx....", "...xHHHhhHHHx...", "..xHHHHHHHHHHx..",
+        "..xHHHHHHHHHHx..", "..xJHHHHHHHHJx..", "..xJHHHHHHHHJx..", "..xJHHHHHHHHJx..",
+        "..xJHHHHHHHHJx..", "..xJHHHHHHHHJx..", "..xJHHHHHHHHJx..", "..xJHHHHHHHHJx..",
+        "..xHHHHHHHHHHx..", "..xJHHHHHHHHJx..", "..xJHHHHHHHHJx..", "..xHxHHHHHHxHx..",
+        "..xSxVVVVVVxSx..", "..xsxvvvvvvxsx..",
+    ],
+}
 
 CAST = {'logan': LOGAN, 'angie': ANGIE, 'ryan': RYAN, 'sophie': SOPHIE, 'mother': MOTHER, 'father': FATHER}
 

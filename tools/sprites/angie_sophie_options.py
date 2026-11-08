@@ -11,7 +11,7 @@ from pathlib import Path
 from PIL import Image, ImageDraw
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from cast12 import ANGIE, SOPHIE, _sway, frame            # noqa: E402
+from cast12 import ANGIE, SOPHIE_DRAFT1 as SOPHIE, _sway, frame            # noqa: E402
 from sophie_options import OUTFITS                        # noqa: E402
 from styles import font                                   # noqa: E402
 

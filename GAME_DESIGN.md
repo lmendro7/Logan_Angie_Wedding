@@ -110,7 +110,7 @@ Short paths connect these places in the approved arrangement shown in docs/map-d
 
 - Shy, funny, sarcastic, very introverted.
 - Short, black hair, pale skin.
-- **November 8, 2026:** Lucas asked for a skinnier model and a smaller nose, and supplied reference photos (kept out of the repository). They show long dark hair with caramel-blonde streaks, dark-framed glasses and an olive-green top; options in docs/art/cast-12/sophie-photo-options.png await his pick.
+- **November 8, 2026:** Lucas asked for a skinnier model and a smaller nose, and supplied reference photos (kept out of the repository). They show long dark hair with caramel-blonde streaks, dark-framed glasses and an olive-green top; he chose long dark hair with caramel streaks, a skinnier body, a small nose and an olive dress (option 2 in docs/art/cast-12/sophie-photo-options.png). This replaces the earlier short-hair description for her sprite.
 - Gives the clue toward the first ring.
 - Dialogue direction supplied by Lucas; location wording remains pending:
 
