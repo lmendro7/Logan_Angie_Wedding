@@ -1,6 +1,6 @@
 # Logan & Angie's Wedding Game — Design and Requirements
 
-Last updated: November 7, 2026  
+Last updated: November 8, 2026  
 Project owner and design reviewer: Lucas  
 Repository: https://github.com/lmendro7/Logan_Angie_Wedding
 
@@ -146,7 +146,8 @@ The parents then provide the clue toward the second ring. Exact clue and any con
 - Personalize character appearance where practical.
 - Use assets licensed for this use; do not assume Stardew Valley or Pokémon sprites can be copied.
 - Record asset sources, licenses, and required attribution.
-- Asset pack and exact sprite resolution remain unselected.
+- **Chosen November 8, 2026:** map sprites in full-colour style 12, "a mix of older Pokémon games and Stardew": every character 16 × 24 pixels, the same size, with four-direction walking. The detailed models appear as portraits beside the speaker's name in conversations. All six characters are in the game in this style ([docs/art/cast-12](docs/art/cast-12/README.md)); Sophie's and the parents' sprites are first drafts awaiting review, and their portraits are stand-ins until detailed models exist.
+- Scenery is still code-drawn placeholder art; environment assets remain unselected.
 - Reference photos guide appearance; uploading them to the public repository or including them in the shipped game has not been requested.
 
 ## 8. Agreed technical direction

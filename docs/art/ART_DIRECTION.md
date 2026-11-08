@@ -1,13 +1,13 @@
 # World sprites and dialogue portraits
 
-Current direction approved November 7, 2026. This document records the requested presentation; the runtime assets and portrait UI remain to be built.
+Current direction approved November 7, 2026; style chosen November 8, 2026. This document records the requested presentation; the runtime assets and portrait UI remain to be built.
 
 | Asset | Intended presentation | Preparation and review |
 | --- | --- | --- |
 | World sprite | Very basic, highly pixelated character, readable at the small size used on the map | Original four-direction sprites at a consistent logical resolution, scale, palette, baseline, and frame alignment; review at actual game scale and with crisp nearest-neighbor enlargement |
 | Dialogue portrait | Separate, more detailed character image beside the speaking character's name | Adapt retained detailed designs, matching the approved appearance and outfit; review crop and phone readability before integration |
 
-Each of Logan, Angie, Ryan, Sophie, Logan's Mother, and Logan's Father needs both representations. Keep the detailed designs; they are appearance references for portraits. Review boards are not animation-ready sprite sheets or finished portrait crops. Exact sprite dimensions, animation frame counts, and portrait dimensions remain open. A previously suggested 16 by 32 pixels was a proposal, not an approved specification.
+Each of Logan, Angie, Ryan, Sophie, Logan's Mother, and Logan's Father needs both representations. Keep the detailed designs; they are appearance references for portraits. Review boards are not animation-ready sprite sheets or finished portrait crops. Chosen November 8, 2026: map sprites are 16 × 24 for every character, in full-colour style 12 (older Pokémon meets Stardew), with stand + two step frames in four directions. Portraits are 96 × 96 pixel art. See [cast-12](cast-12/README.md).
 
 ## Current references
 

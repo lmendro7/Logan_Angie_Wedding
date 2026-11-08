@@ -1,6 +1,30 @@
 Runtime license notices
 
-All current visual placeholders are original code-drawn graphics. No Stardew Valley or Pokémon assets are included.
+Character map sprites (public/sprites) are original hand-placed pixel art made for this game.
+No Stardew Valley or Pokémon assets are included. Scenery is original code-drawn placeholder art.
+
+Dialogue portraits
+------------------
+public/portraits/logan.png and public/portraits/angie.png are derived from the approved character
+boards (docs/art/logan-approved-01, docs/art/angie-approved-01), which were developed from
+Liberated Pixel Cup (LPC) layers. They are distributed under CC-BY-SA 4.0
+(https://creativecommons.org/licenses/by-sa/4.0/). Changes: layer composition, recolouring,
+photo-guided editing of hair, face and proportions, extraction to pixel scale, Logan's shirt
+recolouring. Source repository: https://github.com/sanderfrenken/Universal-LPC-Spritesheet-Character-Generator at commit 675e21e04aaff8486a3a24e09573b3d5af9d28b9.
+Underlying LPC layer credits:
+- body/bodies/male: bluecarrot16, Benjamin K. Smith (BenCreating), Evert, Eliza Wyatt (ElizaWy), TheraHedwig, MuffinElZangano, Durrani, Johannes Sj?lund (wulax), Stephen Challener (Redshrike) (CC-BY-SA 3.0, GPL 3.0) https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles https://opengameart.org/content/lpc-medieval-fantasy-character-sprites
+- feet/shoes: bluecarrot16, Johannes Sjölund (wulax) (OGA-BY 3.0, CC-BY-SA 3.0, GPL 3.0) https://opengameart.org/content/lpc-medieval-fantasy-character-sprites http://opengameart.org/content/lpc-clothing-updates
+- legs/formal: bluecarrot16, Thane Brimhall (pennomi), laetissima, Stephen Challener (Redshrike) (CC-BY-SA 3.0, GPL 3.0) https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles https://opengameart.org/content/lpc-medieval-fantasy-character-sprites
+- torso/clothes/longsleeve/formal: bluecarrot16, Thane Brimhall (pennomi), laetissima, Johannes Sjölund (wulax) (CC-BY-SA 3.0, GPL 3.0) https://opengameart.org/content/lpc-medieval-fantasy-character-sprites https://opengameart.org/content/lpc-2-characters
+- torso/jacket/collared: bluecarrot16 (CC-BY-SA 3.0, GPL 3.0) https://opengameart.org/content/lpc-gentleman https://opengameart.org/content/lpc-pirates
+- neck/tie/bowtie: JaidynReiman, bluecarrot16, Thane Brimhall (pennomi), laetissima, Makrohn (CC-BY-SA 3.0, GPL 3.0) https://opengameart.org/content/lpc-2-characters https://opengameart.org/content/lpc-gentleman
+- head/heads/human/male: bluecarrot16, Benjamin K. Smith (BenCreating), Stephen Challener (Redshrike) (OGA-BY 3.0, CC-BY-SA 3.0, GPL 3.0) https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles https://opengameart.org/content/lpc-character-bases
+- eyes/human: JaidynReiman, Matthew Krohn (makrohn), Stephen Challener (Redshrike) (OGA-BY 3.0, CC-BY-SA 3.0, GPL 3.0) https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles
+- beards/beard/trimmed: ElizaWy (OGA-BY 3.0) https://github.com/ElizaWy/LPC/tree/main/Characters/Hair https://opengameart.org/content/expanded-universal-lpc-spritesheet-idle-run-jump-lpc-revised-combat-and-assets
+- hair/buzzcut: ElizaWy (OGA-BY 3.0) https://opengameart.org/content/lpc-hair
+
+public/portraits/ryan.png is from Ryan's approved original design board. The Sophie, Logan's Mother
+and Logan's Father portraits are enlarged original map sprites, used until their detailed models exist.
 
 
 Phaser 3.90.0

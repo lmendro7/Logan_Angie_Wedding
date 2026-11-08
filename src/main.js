@@ -16,6 +16,16 @@ let afterDialogue = null;
 let previousFocus = null;
 let restartArmed = false;
 const overlays = ['dialogue', 'menu', 'ending'];
+// Detailed models shown beside the speaker's name. Sophie and the parents use
+// enlarged map sprites until their detailed models are made.
+const PORTRAITS = {
+  Logan: 'portraits/logan.png', Angie: 'portraits/angie.png', Ryan: 'portraits/ryan.png',
+  Sophie: 'portraits/sophie.png', "Logan's Mother": 'portraits/mother.png', "Logan's Father": 'portraits/father.png',
+};
+// Map sprites: 16 x 24 frames; rows down, right, up, left; columns stand, step A, step B.
+const SHEETS = { logan: 'logan', ryan: 'ryan', sophie: 'sophie', parents: 'mother', dad: 'father', angie: 'angie' };
+const DIRS = ['down', 'right', 'up', 'left'];
+const ZOOM = 1.5;
 const blocked = () => overlays.some(id => !$(id).hidden);
 function persist() {
   const ok = saveProgress(storage, progress);
@@ -42,6 +52,9 @@ function say(lines, done) {
 function renderLine() {
   const [speaker, words] = dialogue[0];
   $('speaker').textContent = speaker;
+  const portrait = PORTRAITS[speaker];
+  $('portrait').hidden = !portrait;
+  if (portrait) { $('portrait').src = portrait; $('portrait').alt = speaker; }
   $('words').textContent = words;
   $('next').textContent = dialogue.length > 1 ? 'Next →' : 'Continue →';
 }
@@ -110,9 +123,14 @@ function clearInput() { held.clear(); keyboard.clear(); document.querySelectorAl
 window.addEventListener('blur', clearInput);
 document.addEventListener('visibilitychange', () => { if (document.hidden) { clearInput(); persist(); } });
 
-// All art below is original code-drawn placeholder art. Final sprites get separate review.
+// Characters use the hand-drawn 16 x 24 sprite sheets in public/sprites; the scenery is still code-drawn.
 class Adventure extends Phaser.Scene {
   constructor() { super('adventure'); }
+  preload() {
+    for (const sheet of new Set(Object.values(SHEETS))) {
+      this.load.spritesheet(sheet, `sprites/${sheet}.png`, { frameWidth: 16, frameHeight: 24 });
+    }
+  }
   create() {
     scene = this;
     this.room = progress.room;
@@ -120,16 +138,22 @@ class Adventure extends Phaser.Scene {
     const roomSize = this.room === 'garden' ? GARDEN : BEDROOM;
     this.cameras.main.setBounds(0, 0, roomSize.width, roomSize.height);
     this.cameras.main.setBackgroundColor(this.room === 'bedroom' ? '#bda27a' : '#97b779');
-    const frameRoom = () => this.cameras.main.setZoom(this.room === 'bedroom' ? Math.max(this.scale.width / BEDROOM.width, this.scale.height / BEDROOM.height) : 1);
+    const frameRoom = () => this.cameras.main.setZoom(this.room === 'bedroom' ? Math.max(ZOOM, this.scale.width / BEDROOM.width, this.scale.height / BEDROOM.height) : ZOOM);
     frameRoom();
     this.scale.on('resize', frameRoom);
     this.events.once('shutdown', () => this.scale.off('resize', frameRoom));
     this.backdrop = this.add.graphics();
     if (this.room === 'bedroom') this.drawBedroom(); else this.drawGarden();
-    this.character = this.add.container(0, 0, this.makePerson(0x242c30, 0x76563f, true));
-    this.character.setDepth(10);
+    DIRS.forEach((dir, row) => {
+      if (!this.anims.exists(`logan-${dir}`)) this.anims.create({ key: `logan-${dir}`, frameRate: 7, repeat: -1,
+        frames: [1, 0, 2, 0].map(col => ({ key: 'logan', frame: row * 3 + col })) });
+    });
+    this.facing = this.room === 'bedroom' ? 0 : 2;
+    this.loganSprite = this.add.sprite(0, 1, 'logan', this.facing * 3).setOrigin(0.5, 1);
+    this.character = this.add.container(0, 0, [this.add.ellipse(0, 0, 13, 4, 0x263c30, 0.3), this.loganSprite]);
     this.position = this.room === 'bedroom' ? { x: 144, y: 210 } : { x: 384, y: 820 };
     this.character.setPosition(this.position.x, this.position.y);
+    this.character.setDepth(this.position.y);
     this.cameras.main.startFollow(this.character, true, 0.15, 0.15);
     this.cameras.main.setRoundPixels(true);
     $('loading')?.remove();
@@ -138,19 +162,8 @@ class Adventure extends Phaser.Scene {
     if (this.room === 'bedroom') say([['Logan', "Today's the wedding!"], ['Logan', 'Wait… where are the rings? I had them last night.']], () => {});
   }
   box(x, y, w, h, color) { this.backdrop.fillStyle(color).fillRect(x, y, w, h); }
-  makePerson(clothes, hair = 0x8b6847, groom = false) {
-    const g = this.add.graphics();
-    g.fillStyle(0x263c30, 0.25).fillEllipse(0, 1, 26, 10);
-    g.fillStyle(0x273930).fillRect(-7, -4, 5, 8).fillRect(2, -4, 5, 8);
-    g.fillStyle(clothes).fillRect(-9, -21, 18, 19);
-    g.fillStyle(0xe8c7a4).fillRect(-7, -34, 14, 13).fillRect(-12, -19, 3, 9).fillRect(9, -19, 3, 9);
-    g.fillStyle(hair).fillRect(-8, -38, 16, 7).fillRect(-8, -34, 3, 7);
-    g.fillStyle(0x3b3c30).fillRect(-4, -29, 2, 2).fillRect(3, -29, 2, 2);
-    if (groom) { g.fillStyle(0xf8f3e4).fillTriangle(-4, -21, 4, -21, 0, -7); g.fillStyle(0x76563f).fillRect(-5, -24, 10, 3); }
-    return [g];
-  }
   label(x, y, text, size = 12) {
-    return this.add.text(x, y, text, { fontFamily: 'Georgia', fontSize: `${size}px`, color: '#fff5d9', backgroundColor: '#2d4939', padding: { x: 6, y: 3 } }).setOrigin(0.5).setDepth(3);
+    return this.add.text(x, y, text, { fontFamily: 'Georgia', fontSize: `${size}px`, color: '#fff5d9', backgroundColor: '#2d4939', padding: { x: 4, y: 2 } }).setOrigin(0.5).setDepth(3).setResolution(4);
   }
   drawBedroom() {
     this.box(0, 0, 360, 400, 0xbda27a);
@@ -163,7 +176,7 @@ class Adventure extends Phaser.Scene {
     this.box(154, 7, 52, 29, 0x765b43); this.box(159, 10, 42, 23, 0xa6c6c5); this.box(179, 10, 3, 23, 0xf7f0d5);
     this.box(125, 235, 112, 85, 0x917b72); this.box(132, 242, 98, 71, 0xac9690);
     this.box(151, 366, 58, 34, 0x6a543f); this.box(155, 370, 50, 30, 0xd7bc87);
-    this.label(180, 350, 'Garden ↓');
+    this.label(180, 350, 'Garden ↓', 9);
   }
   tree(x, y) {
     this.box(x - 8, y, 16, 32, 0x826344);
@@ -199,14 +212,15 @@ class Adventure extends Phaser.Scene {
     for (const [x, y] of [[120, 280], [290, 390], [610, 570], [270, 550], [625, 720], [140, 795]]) {
       for (let n = 0; n < 4; n++) { this.box(x + n * 9, y + (n % 2) * 8, 5, 6, 0xeac4a4); this.box(x + n * 9 + 2, y + 6 + (n % 2) * 8, 2, 6, 0x648555); }
     }
+    this.npcSprites = new Map();
     for (const npc of NPCS) {
-      const hair = npc.id === 'sophie' ? 0x252c30 : npc.id === 'ryan' ? 0xc4a36e : 0x8d6847;
-      const person = this.add.container(npc.x, npc.y, this.makePerson(npc.color, hair));
-      person.setDepth(5);
-      this.label(npc.x, npc.y + (npc.id === 'dad' ? 44 : 16), npc.name, 11);
+      const sprite = this.add.sprite(0, 1, SHEETS[npc.id], 0).setOrigin(0.5, 1);
+      this.add.container(npc.x, npc.y, [this.add.ellipse(0, 0, 12, 4, 0x263c30, 0.3), sprite]).setDepth(npc.y);   // y-sorted
+      this.npcSprites.set(npc.id, sprite);
+      this.label(npc.x, npc.y + (npc.id === 'dad' ? 20 : 9), npc.name, 7);
     }
-    this.label(384, 868, "Logan's house");
-    this.label(384, 39, 'Wedding ceremony');
+    this.label(384, 868, "Logan's house", 9);
+    this.label(384, 39, 'Wedding ceremony', 9);
     this.ringGraphics = new Map();
     for (const ring of RINGS) {
       const g = this.add.graphics().setPosition(ring.x, ring.y).setDepth(4);
@@ -249,10 +263,20 @@ class Adventure extends Phaser.Scene {
     }
     if (target.id === 'angie') {
       if (!gateOpen(progress)) return;
+      this.faceLogan(['angie']);
       return say([['Angie', 'You made it!']], () => { progress.completed = true; persist(); showOverlay('ending', 'return'); });
     }
+    this.faceLogan(target.id === 'parents' || target.id === 'dad' ? ['parents', 'dad'] : [target.id]);
     const id = target.id === 'dad' ? 'parents' : target.id;
     say(conversations[id], () => { progress.met = [...new Set([...progress.met, id])]; persist(); });
+  }
+  faceLogan(ids) {
+    for (const id of ids) {
+      const npc = NPCS.find(n => n.id === id); const sprite = this.npcSprites?.get(id);
+      if (!npc || !sprite) continue;
+      const dx = this.position.x - npc.x, dy = this.position.y - npc.y;
+      sprite.setFrame((Math.abs(dx) > Math.abs(dy) ? (dx > 0 ? 1 : 3) : (dy > 0 ? 0 : 2)) * 3);
+    }
   }
   update(time, delta) {
     if (!this.character) return;
@@ -266,7 +290,10 @@ class Adventure extends Phaser.Scene {
       this.position = movePlayer(this.position, dx / length * step, dy / length * step, this.room, this.open);
       const moving = before.x !== this.position.x || before.y !== this.position.y;
       this.character.setPosition(Math.round(this.position.x), Math.round(this.position.y));
-      this.character.first.y = moving ? Math.sin(time / 85) * 1.5 : 0;
+      this.character.setDepth(this.position.y);   // in front of whoever stands further up the screen
+      if (dx || dy) this.facing = Math.abs(dx) > Math.abs(dy) ? (dx > 0 ? 1 : 3) : (dy > 0 ? 0 : 2);
+      if (moving) this.loganSprite.play(`logan-${DIRS[this.facing]}`, true);
+      else { this.loganSprite.stop(); this.loganSprite.setFrame(this.facing * 3); }
     }
     const near = this.nearest();
     $('action').textContent = near?.label ?? 'Explore';

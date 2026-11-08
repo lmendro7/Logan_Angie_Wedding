@@ -14,7 +14,7 @@ from PIL import Image, ImageColor, ImageDraw, ImageFont
 from characters import CHARACTERS, OPTIONS
 
 ROOT = Path(__file__).resolve().parents[2]
-RUNTIME = ROOT / 'public' / 'sprites'
+RUNTIME = ROOT / 'docs' / 'art' / 'sprites-01' / 'sheets'   # superseded 16x32 drafts; the game's sheets come from cast12.py
 REVIEW = ROOT / 'docs' / 'art' / 'sprites-01'
 W, H = 16, 32
 TOP_ROWS = 25

@@ -10,7 +10,7 @@ Read [SESSION_HANDOFF.md](SESSION_HANDOFF.md), [session notes](docs/SESSION_NOTE
 
 The first playable foundation implements the approved garden layout, bedroom opening, touch/keyboard movement, character dialogue, two separate ring discoveries, device-local progress, and a ceremony gate that opens only after both rings are collected.
 
-**This is a review build.** All environment and character art is original code-drawn placeholder art. Remaining individual character reviews, runtime sprite preparation, dialogue portraits, and environment asset selection are still ahead. The clue endings, opening lines, title, and extra ending-screen wording are provisional. No reference photos are shipped.
+**This is a review build.** Characters use hand-drawn 16 × 24 sprites in the chosen style (older Pokémon meets Stardew) with detailed portraits in conversations; see [docs/art/cast-12](docs/art/cast-12/README.md). Scenery is still original code-drawn placeholder art. Remaining individual character reviews, runtime sprite preparation, dialogue portraits, and environment asset selection are still ahead. The clue endings, opening lines, title, and extra ending-screen wording are provisional. No reference photos are shipped.
 
 ## Run locally
 
@@ -44,6 +44,8 @@ The build produces a static `dist/` directory with the engine bundled locally; i
 - `src/quest.js`: ring identity, save validation, gate condition, and objective text.
 - `src/content.js`: editable dialogue, including approved wording and provisional clue endings.
 - `tests/quest.test.js`: quest, save recovery, collision, and reachability checks.
+- `tests/sprites.test.js`: every character has a correctly sized sprite sheet and portrait.
+- `tools/sprites/`: scripts that build the sprites (`cast12.py`) and portraits (`portraits.py`).
 - `public/LICENSES.txt`: runtime dependency license notices.
 
 ## Validation and remaining reviews
