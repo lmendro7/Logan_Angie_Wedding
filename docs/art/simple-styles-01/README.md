@@ -29,3 +29,11 @@ Temporary local build (not committed), Chromium at a 390 × 844 phone viewport. 
 ![Style 13 in game](ingame-style13.png)
 
 ![Style 20 in game](ingame-style20.png)
+
+## Variations on style 13
+
+Lucas liked style 13 but it was not exactly right. Eighteen variations (A–R), each changing one thing: pastel strength, outline, eyes, body height or colour mood. P is the original full-colour handheld style for reference.
+
+![Style 13 variations](logan-style13-variations.png)
+
+Rebuild: `python3 tools/sprites/similar_13.py`.
