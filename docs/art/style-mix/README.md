@@ -16,3 +16,13 @@ Two body shapes: **A** classic 24 × 48 (head about 40% of the height) and **B**
 6. Golden hour: warm colours, tinted outline, blush
 
 Rebuild: `python3 tools/sprites/style_mix.py`.
+
+## Round 2 — simple and comforting
+
+Lucas: round 1 was not what he imagined. He likes Stardew's simple, comforting designs, mixed with Pokémon. Round 2 uses rounded heads, soft brown outlines, gentle 2–3 tone shading, dot or shiny eyes and blush, with chibi proportions and clean colours from Pokémon. Each is shown enlarged and in a patch of garden at phone size.
+
+![Round 2](round-2.png)
+
+1. Stardew comfort (16 × 32) · 2. Pokémon comfort (16 × 28, brighter) · 3. Even mix (16 × 28, soft colours, shiny eyes) · 4. Extra soft (tinted outline) · 5. Big round head · 6. Big head, bright
+
+Rebuild: `python3 tools/sprites/style_mix2.py`.
