@@ -15,7 +15,7 @@ from pathlib import Path
 from PIL import Image, ImageColor, ImageDraw
 
 ROOT = Path(__file__).resolve().parents[2]
-RUNTIME = ROOT / 'public' / 'sprites'
+RUNTIME = ROOT / 'docs' / 'art' / 'cast-12' / 'sheets'   # superseded by tools/sprites/cozy.py (Cozy Garden)
 REVIEW = ROOT / 'docs' / 'art' / 'cast-12'
 W, H = 16, 24
 OUTLINE = '#2b1d1d'

@@ -17,4 +17,6 @@ Use simple, highly pixelated map sprites and separate, more detailed dialogue po
 
 See [ART_DIRECTION.md](ART_DIRECTION.md) for the separate world-sprite and dialogue-portrait workflow, and [session notes](../SESSION_NOTES.md) for the recovered decision log.
 
-**November 8, 2026:** Lucas chose map-sprite style 12 (full colour, a mix of older Pokémon games and Stardew), with every character the same size and the detailed models shown in conversations. All six characters are in the game in that style; see [cast-12](cast-12/README.md). Earlier explorations (simple-styles-01, style-options-01, board-sprites-01, logan-lpc-01, sprites-01, ryan-sprite-01) are kept as history.
+**Latest, November 8, 2026:** after playtesting, the game switched to the Cozy Garden style (16 × 32, Stardew-like comfort with a touch of Pokémon), designed with Lucas's full creative go-ahead; see [cozy](cozy/README.md). Character decisions below carry over.
+
+**Earlier, November 8, 2026:** Lucas chose map-sprite style 12 (full colour, a mix of older Pokémon games and Stardew), with every character the same size and the detailed models shown in conversations. All six characters are in the game in that style; see [cast-12](cast-12/README.md). Earlier explorations (simple-styles-01, style-options-01, board-sprites-01, logan-lpc-01, sprites-01, ryan-sprite-01) are kept as history.

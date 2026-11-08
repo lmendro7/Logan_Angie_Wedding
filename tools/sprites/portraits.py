@@ -98,8 +98,8 @@ def main():
     fit(ryan_from_board(), 2).save(OUT / "ryan.png")
     sheets = ROOT / 'public' / 'sprites'
     for cid in ('sophie', 'mother', 'father'):
-        sprite = Image.open(sheets / f'{cid}.png').convert('RGBA').crop((0, 0, 16, 18))
-        fit(sprite, 5).save(OUT / f'{cid}.png')
+        sprite = Image.open(sheets / f'{cid}.png').convert('RGBA').crop((0, 0, 16, 22))   # Cozy Garden head and shoulders
+        fit(sprite, 4).save(OUT / f'{cid}.png')
 
 
 if __name__ == '__main__':

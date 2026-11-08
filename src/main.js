@@ -22,7 +22,7 @@ const PORTRAITS = {
   Logan: 'portraits/logan.png', Angie: 'portraits/angie.png', Ryan: 'portraits/ryan.png',
   Sophie: 'portraits/sophie.png', "Logan's Mother": 'portraits/mother.png', "Logan's Father": 'portraits/father.png',
 };
-// Map sprites: 16 x 24 frames; rows down, right, up, left; columns stand, step A, step B.
+// Map sprites (Cozy Garden style): 16 x 32 frames; rows down, right, up, left; columns stand, step A, step B.
 const SHEETS = { logan: 'logan', ryan: 'ryan', sophie: 'sophie', parents: 'mother', dad: 'father', angie: 'angie' };
 const DIRS = ['down', 'right', 'up', 'left'];
 const ZOOM = 1.5;                 // target on-screen scale in CSS pixels
@@ -127,12 +127,12 @@ function clearInput() { held.clear(); keyboard.clear(); document.querySelectorAl
 window.addEventListener('blur', clearInput);
 document.addEventListener('visibilitychange', () => { if (document.hidden) { clearInput(); persist(); } });
 
-// Characters use the hand-drawn 16 x 24 sprite sheets in public/sprites; the scenery is still code-drawn.
+// Characters use the hand-drawn Cozy Garden 16 x 32 sprite sheets in public/sprites; the scenery is still code-drawn.
 class Adventure extends Phaser.Scene {
   constructor() { super('adventure'); }
   preload() {
     for (const sheet of new Set(Object.values(SHEETS))) {
-      this.load.spritesheet(sheet, `sprites/${sheet}.png`, { frameWidth: 16, frameHeight: 24 });
+      this.load.spritesheet(sheet, `sprites/${sheet}.png`, { frameWidth: 16, frameHeight: 32 });
     }
   }
   create() {

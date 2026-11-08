@@ -11,10 +11,10 @@ const size = path => {
 };
 const SHEETS = { logan: 'logan', ryan: 'ryan', sophie: 'sophie', parents: 'mother', dad: 'father', angie: 'angie' };
 
-test('every character has a 16 x 24 sprite sheet: 3 frames x 4 directions', () => {
+test('every character has a 16 x 32 sprite sheet: 3 frames x 4 directions', () => {
   for (const id of ['logan', ...NPCS.map(n => n.id)]) {
     assert.ok(SHEETS[id], `no sheet mapped for ${id}`);
-    assert.deepEqual(size(`sprites/${SHEETS[id]}.png`), [48, 96], id);
+    assert.deepEqual(size(`sprites/${SHEETS[id]}.png`), [48, 128], id);
   }
 });
 
