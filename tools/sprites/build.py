@@ -11,7 +11,7 @@ columns = stand, step A, step B. Feet touch the bottom row (origin 0.5, 1).
 from pathlib import Path
 from PIL import Image, ImageColor, ImageDraw, ImageFont
 
-from characters import CHARACTERS
+from characters import CHARACTERS, OPTIONS
 
 ROOT = Path(__file__).resolve().parents[2]
 RUNTIME = ROOT / 'public' / 'sprites'
@@ -34,7 +34,10 @@ def frame(rows, palette, who):
 
 
 def frames_for(cid):
-    c = CHARACTERS[cid]
+    return frames_of(CHARACTERS[cid], cid)
+
+
+def frames_of(c, cid):
     for view in ('front', 'back', 'side'):
         assert len(c[view]) == TOP_ROWS, (cid, view, len(c[view]))
     fb, side = c['legs']
@@ -87,6 +90,29 @@ def main():
 
     BG, INK, MUTED = '#f7efe9', '#14634a', '#5d6b64'
     ids = list(CHARACTERS)
+
+    # Option boards: candidate designs side by side with Ryan, for choosing.
+    for cid, opts in OPTIONS.items():
+        k = 6
+        ob = Image.new('RGBA', (1150, 130 + len(opts) * 300), BG)
+        d = ImageDraw.Draw(ob, 'RGBA')
+        d.text((40, 30), f"{CHARACTERS[cid]['name']} — options", font=font(40), fill=INK)
+        d.text((40, 84), 'front · right · back at 6×, Ryan for reference, and 2× game scale', font=font(20), fill=MUTED)
+        for n, (label, c) in enumerate(opts):
+            rows = frames_of(c, label)
+            y = 130 + n * 300
+            d.text((40, y), label, font=font(24), fill=INK)
+            for r, view in enumerate((0, 1, 2)):
+                ob.alpha_composite(scaled(rows[view][0], k), (40 + r * 120, y + 40))
+            ob.alpha_composite(scaled(all_rows['ryan'][0][0], k), (420, y + 40))
+            d.text((420, y + 240), 'Ryan', font=font(16), fill=MUTED)
+            gx, gy = 580, y + 50
+            d.rectangle([gx, gy, gx + 520, gy + 180], fill='#97b779')
+            for m, img in enumerate([rows[0][0], rows[1][1], all_rows['ryan'][0][0], rows[3][2]]):
+                cx, base = gx + 80 + m * 120, gy + 150
+                shadow(d, cx, base, 2)
+                ob.alpha_composite(scaled(img, 2), (cx - 16, base - 64))
+        ob.convert('RGB').save(REVIEW / f'{cid}-options.png', optimize=True)
 
     # Per-character review: four views at 8x, Ryan alongside, walk frames, game scale.
     for cid in ids:
