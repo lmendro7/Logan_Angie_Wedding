@@ -1,0 +1,274 @@
+{
+ "status": "original-style rebuild for review; not integrated into live game",
+ "source_repository": "https://github.com/sanderfrenken/Universal-LPC-Spritesheet-Character-Generator",
+ "source_commit": "675e21e04aaff8486a3a24e09573b3d5af9d28b9",
+ "source_license_choice": "CC-BY-SA 3.0 where offered; OGA-BY 3.0 for OGA-only layers",
+ "composite_artwork_license": "CC-BY-SA 4.0",
+ "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+ "changes": "Layer composition; retain only four-direction walk frames; no facial photo pixels used. Preview enlargements use nearest-neighbor scaling. Hair swapped to cowlick; hair and beard recoloured to the approved dirty blond.",
+ "frame_width": 64,
+ "frame_height": 64,
+ "columns": 9,
+ "rows": [
+  "up",
+  "left",
+  "down",
+  "right"
+ ],
+ "source_crop": [
+  0,
+  512,
+  576,
+  768
+ ],
+ "layers": [
+  {
+   "path": "spritesheets/body/bodies/male/light.png",
+   "definition": "sheet_definitions/body.json",
+   "credits": [
+    {
+     "file": "body/bodies/male",
+     "notes": "see details at https://opengameart.org/content/lpc-character-bases; 'Thick' Male Revised Run/Climb by JaidynReiman (based on ElizaWy's LPC Revised)",
+     "authors": [
+      "bluecarrot16",
+      "Benjamin K. Smith (BenCreating)",
+      "Evert",
+      "Eliza Wyatt (ElizaWy)",
+      "TheraHedwig",
+      "MuffinElZangano",
+      "Durrani",
+      "Johannes Sj?lund (wulax)",
+      "Stephen Challener (Redshrike)"
+     ],
+     "licenses": [
+      "CC-BY-SA 3.0",
+      "GPL 3.0"
+     ],
+     "urls": [
+      "https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles",
+      "https://opengameart.org/content/lpc-medieval-fantasy-character-sprites",
+      "https://opengameart.org/content/lpc-male-jumping-animation-by-durrani",
+      "https://opengameart.org/content/lpc-runcycle-and-diagonal-walkcycle",
+      "https://opengameart.org/content/lpc-revised-character-basics",
+      "https://opengameart.org/content/lpc-be-seated",
+      "https://opengameart.org/content/lpc-runcycle-for-male-muscular-and-pregnant-character-bases-with-modular-heads",
+      "https://opengameart.org/content/lpc-jump-expanded",
+      "https://opengameart.org/content/lpc-character-bases"
+     ]
+    }
+   ]
+  },
+  {
+   "path": "spritesheets/feet/shoes/male/black.png",
+   "definition": "sheet_definitions/feet_shoes.json",
+   "credits": [
+    {
+     "file": "feet/shoes",
+     "notes": "original by wulax, edited for v3 base by bluecarrot16",
+     "authors": [
+      "bluecarrot16",
+      "Johannes Sj\u00f6lund (wulax)"
+     ],
+     "licenses": [
+      "OGA-BY 3.0",
+      "CC-BY-SA 3.0",
+      "GPL 3.0"
+     ],
+     "urls": [
+      "https://opengameart.org/content/lpc-medieval-fantasy-character-sprites",
+      "http://opengameart.org/content/lpc-clothing-updates"
+     ]
+    }
+   ]
+  },
+  {
+   "path": "spritesheets/legs/formal/male/black.png",
+   "definition": "sheet_definitions/legs_formal.json",
+   "credits": [
+    {
+     "file": "legs/formal",
+     "notes": "Original pants by Stephen Challener (Redshrike), Formal Pants by Bluecarrot16, climb/jump/run/sit/emotes/revised combat by JaidynReiman",
+     "authors": [
+      "bluecarrot16",
+      "Thane Brimhall (pennomi)",
+      "laetissima",
+      "Stephen Challener (Redshrike)"
+     ],
+     "licenses": [
+      "CC-BY-SA 3.0",
+      "GPL 3.0"
+     ],
+     "urls": [
+      "https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles",
+      "https://opengameart.org/content/lpc-medieval-fantasy-character-sprites",
+      "https://opengameart.org/content/lpc-2-characters",
+      "https://opengameart.org/content/lpc-gentleman",
+      "https://opengameart.org/content/lpc-expanded-pants"
+     ]
+    }
+   ]
+  },
+  {
+   "path": "spritesheets/torso/clothes/longsleeve/formal/male/white.png",
+   "definition": "sheet_definitions/torso_clothes_longsleeve_formal.json",
+   "credits": [
+    {
+     "file": "torso/clothes/longsleeve/formal",
+     "notes": "",
+     "authors": [
+      "bluecarrot16",
+      "Thane Brimhall (pennomi)",
+      "laetissima",
+      "Johannes Sj\u00f6lund (wulax)"
+     ],
+     "licenses": [
+      "CC-BY-SA 3.0",
+      "GPL 3.0"
+     ],
+     "urls": [
+      "https://opengameart.org/content/lpc-medieval-fantasy-character-sprites",
+      "https://opengameart.org/content/lpc-2-characters",
+      "https://opengameart.org/content/lpc-gentleman"
+     ]
+    }
+   ]
+  },
+  {
+   "path": "spritesheets/torso/jacket/collared/male/black.png",
+   "definition": "sheet_definitions/torso_jacket_collared.json",
+   "credits": [
+    {
+     "file": "torso/jacket/collared",
+     "notes": "",
+     "authors": [
+      "bluecarrot16"
+     ],
+     "licenses": [
+      "CC-BY-SA 3.0",
+      "GPL 3.0"
+     ],
+     "urls": [
+      "https://opengameart.org/content/lpc-gentleman",
+      "https://opengameart.org/content/lpc-pirates"
+     ]
+    }
+   ]
+  },
+  {
+   "path": "spritesheets/neck/tie/bowtie/adult/black.png",
+   "definition": "sheet_definitions/neck_bowtie.json",
+   "credits": [
+    {
+     "file": "neck/tie/bowtie",
+     "notes": "Originally by pennomi/laetissima/Makrohn, edited by bluecarrot16, recolors by JaidynReiman",
+     "authors": [
+      "JaidynReiman",
+      "bluecarrot16",
+      "Thane Brimhall (pennomi)",
+      "laetissima",
+      "Makrohn"
+     ],
+     "licenses": [
+      "CC-BY-SA 3.0",
+      "GPL 3.0"
+     ],
+     "urls": [
+      "https://opengameart.org/content/lpc-2-characters",
+      "https://opengameart.org/content/lpc-gentleman"
+     ]
+    }
+   ]
+  },
+  {
+   "path": "spritesheets/head/heads/human/male/light.png",
+   "definition": "sheet_definitions/heads_human_male.json",
+   "credits": [
+    {
+     "file": "head/heads/human/male",
+     "notes": "original head by Redshrike, tweaks by BenCreating, modular version by bluecarrot16",
+     "authors": [
+      "bluecarrot16",
+      "Benjamin K. Smith (BenCreating)",
+      "Stephen Challener (Redshrike)"
+     ],
+     "licenses": [
+      "OGA-BY 3.0",
+      "CC-BY-SA 3.0",
+      "GPL 3.0"
+     ],
+     "urls": [
+      "https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles",
+      "https://opengameart.org/content/lpc-character-bases"
+     ]
+    }
+   ]
+  },
+  {
+   "path": "spritesheets/eyes/human/adult/brown.png",
+   "definition": "sheet_definitions/eyes.json",
+   "credits": [
+    {
+     "file": "eyes/human",
+     "notes": "original by Redshrike, mapped to all frames by Matthew Krohn & JaidynReiman",
+     "authors": [
+      "JaidynReiman",
+      "Matthew Krohn (makrohn)",
+      "Stephen Challener (Redshrike)"
+     ],
+     "licenses": [
+      "OGA-BY 3.0",
+      "CC-BY-SA 3.0",
+      "GPL 3.0"
+     ],
+     "urls": [
+      "https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles"
+     ]
+    }
+   ]
+  },
+  {
+   "path": "spritesheets/beards/beard/trimmed/light_brown.png",
+   "definition": "sheet_definitions/beards_trimmed.json",
+   "credits": [
+    {
+     "file": "beards/beard/trimmed",
+     "notes": "",
+     "authors": [
+      "ElizaWy"
+     ],
+     "licenses": [
+      "OGA-BY 3.0"
+     ],
+     "urls": [
+      "https://github.com/ElizaWy/LPC/tree/main/Characters/Hair",
+      "https://opengameart.org/content/expanded-universal-lpc-spritesheet-idle-run-jump-lpc-revised-combat-and-assets"
+     ]
+    }
+   ],
+   "recolour": "dirty blond ramp (see RAMP in tools/sprites/lpc_logan.py)"
+  },
+  {
+   "path": "spritesheets/hair/cowlick/adult/light_brown.png",
+   "definition": "sheet_definitions/hair_cowlick.json",
+   "credits": [
+    {
+     "file": "hair/cowlick",
+     "notes": "Original by bluecarrot16, animated by ElizaWy.",
+     "authors": [
+      "ElizaWy",
+      "bluecarrot16"
+     ],
+     "licenses": [
+      "CC0"
+     ],
+     "urls": [
+      "https://opengameart.org/content/lpc-hair",
+      "https://github.com/ElizaWy/LPC/blob/main/Characters/Hair",
+      "https://opengameart.org/content/expanded-universal-lpc-spritesheet-idle-run-jump-lpc-revised-combat-and-assets"
+     ]
+    }
+   ],
+   "recolour": "dirty blond ramp (see RAMP in tools/sprites/lpc_logan.py)"
+  }
+ ]
+}
