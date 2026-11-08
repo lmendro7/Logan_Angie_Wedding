@@ -5,7 +5,7 @@
  "source_license_choice": "CC-BY-SA 3.0 where offered; OGA-BY 3.0 for OGA-only layers",
  "composite_artwork_license": "CC-BY-SA 4.0",
  "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
- "changes": "Layer composition; retain only four-direction walk frames; no facial photo pixels used. Preview enlargements use nearest-neighbor scaling. Hair swapped to cowlick; hair and beard recoloured to the approved dirty blond.",
+ "changes": "Layer composition; retain only four-direction walk frames; no facial photo pixels used. Preview enlargements use nearest-neighbor scaling. Hair swapped to cowlick, beard to medium; hair and beard recoloured from reference-photo colours.",
  "frame_width": 64,
  "frame_height": 64,
  "columns": 9,
@@ -227,7 +227,7 @@
    ]
   },
   {
-   "path": "spritesheets/beards/beard/trimmed/light_brown.png",
+   "path": "spritesheets/beards/beard/medium/light_brown.png",
    "definition": "sheet_definitions/beards_trimmed.json",
    "credits": [
     {
@@ -245,7 +245,7 @@
      ]
     }
    ],
-   "recolour": "dirty blond ramp (see RAMP in tools/sprites/lpc_logan.py)"
+   "recolour": "beard"
   },
   {
    "path": "spritesheets/hair/cowlick/adult/light_brown.png",
@@ -268,7 +268,7 @@
      ]
     }
    ],
-   "recolour": "dirty blond ramp (see RAMP in tools/sprites/lpc_logan.py)"
+   "recolour": "hair"
   }
  ]
 }

@@ -19,17 +19,25 @@ DRAFT = ROOT / 'docs' / 'art' / 'logan-draft-01' / 'recipe.json'
 OUT = ROOT / 'docs' / 'art' / 'logan-lpc-01'
 SRC = Path(sys.argv[1])
 
-HAIR = 'spritesheets/hair/cowlick/adult/light_brown.png'
-BEARD = 'spritesheets/beards/beard/trimmed/light_brown.png'
-# LPC light_brown ramp (dark -> light) mapped to the approved board's dirty blond.
-RAMP = {
-    (26, 14, 4): (30, 21, 12),
-    (48, 27, 7): (62, 45, 26),
-    (96, 53, 15): (96, 71, 39),
-    (125, 69, 19): (126, 94, 55),
-    (174, 104, 42): (156, 117, 72),
-    (200, 141, 88): (200, 162, 112),
-}
+HAIR_STYLE = 'cowlick'
+BEARD_STYLE = 'medium'
+LPC_RAMP = [(26, 14, 4), (48, 27, 7), (96, 53, 15), (125, 69, 19), (174, 104, 42), (200, 141, 88)]
+# Colours taken from the reference photos (kept out of the repo):
+# light ash-brown hair, lighter on top; warmer ginger-brown beard.
+HAIR_RAMP = [(28, 21, 16), (58, 45, 34), (92, 72, 52), (124, 99, 72), (160, 131, 96), (198, 170, 128)]
+# Softer skin shadows: the stock darkest shade reads as bright red at this size.
+SKIN_MAP = {(153, 66, 60): (164, 100, 80), (204, 134, 101): (214, 150, 118)}
+BEARD_RAMP = [(30, 18, 10), (66, 40, 22), (104, 64, 36), (136, 88, 52), (170, 116, 72), (204, 150, 100)]
+
+
+def hair_path(style):
+    for sub in ('adult', 'male'):
+        p = f'spritesheets/hair/{style}/{sub}/light_brown.png'
+        if (SRC / p).exists():
+            return p
+    raise FileNotFoundError(style)
+
+
 HAIR_CREDITS = [{
     'file': 'hair/cowlick',
     'notes': 'Original by bluecarrot16, animated by ElizaWy.',
@@ -41,14 +49,49 @@ HAIR_CREDITS = [{
 }]
 
 
-def recolour(img):
+def recolour(img, ramp):
+    table = dict(zip(LPC_RAMP, ramp))
     px = img.load()
     for y in range(img.height):
         for x in range(img.width):
             r, g, b, a = px[x, y]
-            if a and (r, g, b) in RAMP:
-                px[x, y] = RAMP[(r, g, b)] + (a,)
+            if a and (r, g, b) in table:
+                px[x, y] = table[(r, g, b)] + (a,)
     return img
+
+
+def recolour_map(img, table):
+    px = img.load()
+    for y in range(img.height):
+        for x in range(img.width):
+            r, g, b, a = px[x, y]
+            if a and (r, g, b) in table:
+                px[x, y] = table[(r, g, b)] + (a,)
+    return img
+
+
+def compose(hair_style, beard_style, crop):
+    recipe = json.loads(DRAFT.read_text())
+    layers = []
+    for layer in recipe['layers']:
+        if 'spritesheets/hair/' in layer['path']:
+            layer = {'path': hair_path(hair_style), 'definition': f'sheet_definitions/hair_{hair_style}.json',
+                     'credits': HAIR_CREDITS if hair_style == 'cowlick' else 'see CREDITS.csv for hair/' + hair_style,
+                     'recolour': 'hair'}
+        elif 'spritesheets/beards/' in layer['path']:
+            layer = {**layer, 'path': f'spritesheets/beards/beard/{beard_style}/light_brown.png', 'recolour': 'beard'}
+        layers.append(layer)
+    sheet = Image.new('RGBA', (crop[2] - crop[0], crop[3] - crop[1]))
+    for layer in layers:
+        part = Image.open(SRC / layer['path']).convert('RGBA').crop(crop)
+        if layer.get('recolour') == 'hair':
+            part = recolour(part, HAIR_RAMP)
+        elif layer.get('recolour') == 'beard':
+            part = recolour(part, BEARD_RAMP)
+        elif '/heads/' in layer['path'] or '/bodies/' in layer['path']:
+            part = recolour_map(part, SKIN_MAP)
+        sheet.alpha_composite(part)
+    return sheet, layers
 
 
 def font(size):
@@ -61,26 +104,15 @@ def font(size):
 def main():
     recipe = json.loads(DRAFT.read_text())
     crop = tuple(recipe['source_crop'])
-    layers = []
-    for layer in recipe['layers']:
-        if 'spritesheets/hair/' in layer['path']:
-            layer = {'path': HAIR, 'definition': 'sheet_definitions/hair_cowlick.json',
-                     'credits': HAIR_CREDITS, 'recolour': 'dirty blond ramp (see RAMP in tools/sprites/lpc_logan.py)'}
-        elif 'spritesheets/beards/' in layer['path']:
-            layer = {**layer, 'path': BEARD, 'recolour': 'dirty blond ramp (see RAMP in tools/sprites/lpc_logan.py)'}
-        layers.append(layer)
-
-    sheet = Image.new('RGBA', (crop[2] - crop[0], crop[3] - crop[1]))
-    for layer in layers:
-        part = Image.open(SRC / layer['path']).convert('RGBA').crop(crop)
-        if 'recolour' in layer:
-            part = recolour(part)
-        sheet.alpha_composite(part)
+    if len(sys.argv) > 2 and sys.argv[2] == '--candidates':
+        candidates(crop)
+        return
+    sheet, layers = compose(HAIR_STYLE, BEARD_STYLE, crop)
 
     OUT.mkdir(parents=True, exist_ok=True)
     sheet.save(OUT / 'logan-walk.png', optimize=True)
     out_recipe = {**recipe, 'status': 'original-style rebuild for review; not integrated into live game',
-                  'changes': recipe['changes'] + ' Hair swapped to cowlick; hair and beard recoloured to the approved dirty blond.',
+                  'changes': recipe['changes'] + f' Hair swapped to {HAIR_STYLE}, beard to {BEARD_STYLE}; hair and beard recoloured from reference-photo colours.',
                   'layers': layers}
     (OUT / 'recipe.json').write_text(json.dumps(out_recipe, indent=1) + '\n')
 
@@ -124,6 +156,26 @@ def main():
             f.alpha_composite(tile(row, col).resize((256, 256), Image.NEAREST))
             frames.append(f.convert('RGB'))
     frames[0].save(OUT / 'logan-walking.gif', save_all=True, append_images=frames[1:], duration=110, loop=0)
+
+
+def candidates(crop):
+    """Grid of haircut x beard options, front and right views, for choosing."""
+    hairs = ['cowlick', 'flat_top_fade', 'spiked', 'messy2', 'parted2', 'plain']
+    beards = ['trimmed', 'medium']
+    k = 3
+    img = Image.new('RGBA', (60 + len(hairs) * 2 * 64 * k, 60 + len(beards) * 64 * k), '#e9eedb')
+    d = ImageDraw.Draw(img)
+    for i, h in enumerate(hairs):
+        d.text((60 + i * 128 * k + 10, 10), h, font=font(18), fill='#14634a')
+        for j, b in enumerate(beards):
+            sheet, _ = compose(h, b, crop)
+            for v, row in enumerate((2, 3)):
+                t = sheet.crop((0, row * 64, 64, row * 64 + 64)).resize((64 * k, 64 * k), Image.NEAREST)
+                img.alpha_composite(t, (60 + i * 128 * k + v * 64 * k - 20, 40 + j * 64 * k))
+    for j, b in enumerate(beards):
+        d.text((4, 40 + j * 64 * k + 90), b, font=font(14), fill='#14634a')
+    out = Path(sys.argv[3])
+    img.convert('RGB').save(out)
 
 
 if __name__ == '__main__':

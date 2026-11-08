@@ -10,9 +10,17 @@ This rebuilds Logan in the style of his [approved board](../logan-approved-01/RE
 
 ## What changed from draft 01
 
-- The buzzcut is replaced by the LPC "cowlick" hair: a compact, lifted, brushed-back top with short sides.
-- The hair and trimmed beard are recoloured to the muted dirty blond sampled from the approved board.
-- Same black suit, white shirt, black bow tie and black shoes.
+- The buzzcut is replaced by the LPC "cowlick" hair: short sides with a lifted, textured top.
+- The trimmed beard is replaced by the fuller "medium" beard.
+- Colours follow reference photos Lucas supplied on November 8, 2026: light ash-brown hair, lighter on top, and a warmer ginger-brown beard. The photos are not stored in the repository and no photo pixels are used.
+- The darkest stock skin shadow, which read as bright red, is softened to a warm brown.
+- Same black suit, white shirt, bow tie (mostly hidden by the beard) and black shoes.
+
+![Close-up](logan-closeup.png)
+
+Other haircut and beard combinations in the same colours, for comparison:
+
+![Hair and beard options](logan-hair-beard-options.png)
 
 ## Sheet
 
@@ -29,4 +37,4 @@ python3 tools/sprites/lpc_logan.py /path/to/Universal-LPC-Spritesheet-Character-
 
 ## Licence and credits
 
-The composition is distributed under [CC-BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). `recipe.json` lists every layer with its artists, licence and source links. The hair is CC0 (bluecarrot16 and ElizaWy); the other layers keep the CC-BY-SA 3.0 or OGA-BY 3.0 choices recorded in draft 01. Changes: layer composition, hair swap, hair and beard recolouring, nearest-neighbour preview enlargement. These credits must appear in the game's credits before this sprite ships. No personal photo pixels are used.
+The composition is distributed under [CC-BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). `recipe.json` lists every layer with its artists, licence and source links. The hair is CC0 (bluecarrot16 and ElizaWy); the other layers keep the CC-BY-SA 3.0 or OGA-BY 3.0 choices recorded in draft 01. Changes: layer composition, hair and beard swaps, hair, beard and skin-shadow recolouring, nearest-neighbour preview enlargement. These credits must appear in the game's credits before this sprite ships. No personal photo pixels are used.
