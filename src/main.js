@@ -25,7 +25,11 @@ const PORTRAITS = {
 // Map sprites: 16 x 24 frames; rows down, right, up, left; columns stand, step A, step B.
 const SHEETS = { logan: 'logan', ryan: 'ryan', sophie: 'sophie', parents: 'mother', dad: 'father', angie: 'angie' };
 const DIRS = ['down', 'right', 'up', 'left'];
-const ZOOM = 1.5;
+const ZOOM = 1.5;                 // target on-screen scale in CSS pixels
+// Render at the screen's real pixel density, and always zoom by a whole number of
+// device pixels, so every sprite pixel is an even, crisp square on phones.
+const DPR = Math.min(4, window.devicePixelRatio || 1);
+const pixelZoom = target => Math.max(1, Math.round(target * DPR));
 const blocked = () => overlays.some(id => !$(id).hidden);
 function persist() {
   const ok = saveProgress(storage, progress);
@@ -138,7 +142,9 @@ class Adventure extends Phaser.Scene {
     const roomSize = this.room === 'garden' ? GARDEN : BEDROOM;
     this.cameras.main.setBounds(0, 0, roomSize.width, roomSize.height);
     this.cameras.main.setBackgroundColor(this.room === 'bedroom' ? '#bda27a' : '#97b779');
-    const frameRoom = () => this.cameras.main.setZoom(this.room === 'bedroom' ? Math.max(ZOOM, this.scale.width / BEDROOM.width, this.scale.height / BEDROOM.height) : ZOOM);
+    const frameRoom = () => this.cameras.main.setZoom(this.room === 'bedroom'
+      ? Math.max(pixelZoom(ZOOM), Math.ceil(Math.max(this.scale.width / BEDROOM.width, this.scale.height / BEDROOM.height)))
+      : pixelZoom(ZOOM));
     frameRoom();
     this.scale.on('resize', frameRoom);
     this.events.once('shutdown', () => this.scale.off('resize', frameRoom));
@@ -301,4 +307,13 @@ class Adventure extends Phaser.Scene {
   }
 }
 
-new Phaser.Game({ type: Phaser.AUTO, parent: 'game', backgroundColor: '#97b779', pixelArt: true, roundPixels: true, scale: { mode: Phaser.Scale.RESIZE, width: 360, height: 400 }, scene: Adventure, banner: false, audio: { noAudio: true } });
+const host = $('game');
+const deviceSize = () => [Math.max(1, Math.round(host.clientWidth * DPR)), Math.max(1, Math.round(host.clientHeight * DPR))];
+const [startW, startH] = deviceSize();
+const game = new Phaser.Game({ type: Phaser.AUTO, parent: 'game', backgroundColor: '#97b779', pixelArt: true, roundPixels: true,
+  scale: { mode: Phaser.Scale.NONE, width: startW, height: startH, zoom: 1 / DPR }, scene: Adventure, banner: false, audio: { noAudio: true } });
+// Keep the canvas matched to its box (rotation, browser bars) at full device resolution.
+new ResizeObserver(() => {
+  const [w, h] = deviceSize();
+  if (w !== game.scale.width || h !== game.scale.height) { game.scale.resize(w, h); game.scale.setZoom(1 / DPR); }
+}).observe(host);
