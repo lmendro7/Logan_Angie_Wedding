@@ -15,3 +15,11 @@ Logan is drawn in the same outfit in each style: white shirt, black bow tie, bla
 A–D are original hand-placed art in the spirit of each genre, not copied from any game. E uses LPC layers; see [logan-lpc-01](../logan-lpc-01/README.md) for credits.
 
 Rebuild: `python3 tools/sprites/styles.py` (E needs `docs/art/logan-lpc-01/logan-walk.png`, built by `tools/sprites/lpc_logan.py`).
+
+## Style A eye options
+
+Lucas chose style A and asked for different eyes. Six versions, everything else unchanged:
+
+![Style A eye options](logan-A-eyes.png)
+
+Rebuild with `python3 tools/sprites/styles.py` (writes both boards).
