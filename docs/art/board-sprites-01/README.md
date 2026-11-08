@@ -34,3 +34,13 @@ Derived from the approved boards ([Logan](../logan-approved-01/README.md), [Angi
 ## Still to do
 
 Ryan, Sophie, Logan's Mother and Logan's Father need art in this style before the game can switch over. Ryan's approved board is in the simpler style.
+
+## In-game preview
+
+Checked in a temporary local build (not committed) in Chromium at a 390 × 844 phone viewport. Logan uses the new sheet with walking animation; Angie uses hers; Ryan still has his smaller approved 16 × 32 sprite; Sophie and the parents are still placeholders.
+
+| Bedroom | Garden, beside Ryan | Ceremony |
+| --- | --- | --- |
+| ![Bedroom](ingame-1-bedroom.png) | ![Garden](ingame-2-garden.png) | ![Ceremony](ingame-3-ceremony.png) |
+
+At the current garden zoom Logan stands about 54 px tall and Angie about 67 px, roughly twice Ryan's height. The rest of the cast needs to be redrawn at this size to match.
