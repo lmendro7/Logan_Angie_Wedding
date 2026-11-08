@@ -42,3 +42,13 @@ All map-sprite pixels are original and hand-placed. Portrait credits are in `pub
 ![Sophie options](sophie-options.png)
 
 Rebuild: `python3 tools/sprites/sophie_options.py`.
+
+## Angie detail options and skinnier Sophie
+
+Lucas liked Angie without glasses but wanted a little more detail, and asked for a skinnier Sophie.
+
+![Angie detail options](angie-options.png)
+
+![Sophie skinnier](sophie-skinny-options.png)
+
+Rebuild: `python3 tools/sprites/angie_sophie_options.py`.
