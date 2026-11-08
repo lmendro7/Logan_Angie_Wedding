@@ -87,7 +87,7 @@ Short paths connect these places in the approved arrangement shown in docs/map-d
 - Appearance reference: the woman in the supplied couple photos.
 - Approved appearance: shoulder-length softly wavy brown hair, glasses, light skin, and a white sleeveless wedding dress with broad straps, a square neckline, fitted waist, and flared skirt.
 - Slim arms and an elongated oval face with a softly tapering jaw and gently rounded chin, guided by the supplied couple photos.
-- **November 8, 2026:** Lucas asked to remove the glasses and give her regular eyes, then to add a short veil. Both the map sprite and the dialogue portrait now show her without glasses and with the veil.
+- **November 8, 2026:** Lucas asked to remove the glasses and give her regular eyes, then to add a short veil. The map sprite has no glasses and wears the veil; the dialogue portrait keeps her glasses (Lucas's request) and also wears the veil.
 - Waits at the venue beneath a flower arch.
 - Appearance approved November 7, 2026: see `docs/art/angie-approved-01/README.md`. Animation-ready sprites still need preparation and verification before integration.
 - Approved ending dialogue:
